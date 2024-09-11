@@ -1,0 +1,202 @@
+.navigation {
+    background: linear-gradient(to bottom, var(--primary-dark), var(--primary-light));
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky; /* Make the navigation sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Ensures the items are spread out across the navbar */
+    align-items: center; /* Align items vertically in the center */
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.brand span {
+    font-size: 1.8em;
+    /* font-weight: bold; */
+    color: #ffffff;
+    /* text-transform: uppercase; */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-list li a:hover {
+    color: #f0f0f0;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center; /* Center buttons vertically */
+    margin-left: 10px;
+}
+
+.icon-button {
+    width: 30px; 
+    height: 30px;
+    margin-left: 10px; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon{
+    position: relative;
+    left: 100px;
+}
+
+
+/* Mobile-specific styles */
+@media only screen and (max-width: 798px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 0;
+        z-index: 1000;
+    }
+
+    .nav-list.open {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+        width: 100%;
+        background: linear-gradient(to top, var(--primary-dark), var(--primary-light));
+    }
+
+    .nav-list li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #ffff;
+    }
+
+    .nav-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* background: #000000;  Background color */
+        height: 70px;
+        width: 70px;
+        cursor: pointer;
+        /* border: 2px solid #ffffff;  */
+        /* Add square border around the nav-mobile container */
+        /* Optional: border-radius: 0; */
+    }
+    
+    .hamburger {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        transition: all 0.3s;
+        /* Center the hamburger icon */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .hamburger:before {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        top: -8px;
+        left: 0;
+        transition: all 0.3s;
+    }
+    
+    .hamburger:after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        top: 8px;
+        left: 0;
+        transition: all 0.3s;
+    }
+    
+    .hamburger.active {
+        background-color: transparent;
+    }
+    
+    .hamburger.active:before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    
+    .hamburger.active:after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+    
+
+    .nav-list {
+        padding-top: 15px;
+    }
+}
+
+/* Ensure the slider does not overlap the navigation */
+/* .slider-container { */
+    /* margin-top: 70px; */
+/* } */
