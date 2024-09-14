@@ -1,0 +1,114 @@
+/* General Styles */
+.collection-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.collection-section .heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.collection-section .heading h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.collection-section .paragraph p {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card Styles */
+.collection-section .card-body {
+  margin-bottom: 30px; /* Adjusted margin for better spacing */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.collection-section .card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Default shadow */
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 125%;
+}
+
+/* Hover Effect for Card */
+
+/* Image Styles */
+.collection-section .card img {
+  width: 100%; /* Ensure the image spans the full width of the card */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the container */
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  position: relative;
+  top: 0;
+  left: -2px;
+}
+
+/* Optional: If you want to make the image larger on hover */
+.collection-section .card:hover img {
+  transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+
+/* Card Text */
+.collection-section .card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+.collection-section .card h4 {
+  font-size: 1.5rem;
+  color: #28a745; /* Price color */
+  margin: 0;
+}
+
+/* Responsive Layout */
+.collection-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -7.5px; /* Adjust negative margin to balance the padding */
+}
+
+.collection-section .col-md-2 {
+  flex: 0 0 calc(20% - 15px); /* Subtract gap value */
+  max-width: calc(20% - 15px); /* Subtract gap value */
+  padding: 7.5px; /* Adjust padding to account for gap */
+}
+
+.collection-section .col-md-2 + .col-md-2 {
+  margin-left: 15px; /* Adjust gap between cards */
+}
+
+@media (max-width: 992px) {
+  .collection-section .col-md-2 {
+    flex: 0 0 calc(25% - 15px); /* Adjusted for 4 cards per row */
+    max-width: calc(25% - 15px); /* Adjusted for 4 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-section .col-md-2 {
+    flex: 0 0 calc(50% - 15px); /* Adjusted for 2 cards per row */
+    max-width: calc(50% - 15px); /* Adjusted for 2 cards per row */
+  }
+}
+
+@media (max-width: 576px) {
+  .collection-section .col-md-2 {
+    flex: 0 0 100%; /* 1 card per row on very small screens */
+    max-width: 100%;
+  }
+}
