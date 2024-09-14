@@ -2,7 +2,6 @@
 import React from "react";
 import "./Collection.css";
 import Cards from "./Cards"; // Correct import
-import image from "../assets/images/ecommerce.webp";
 import image1 from "../assets/images/image-1.png";
 import image2 from "../assets/images/image-2.png";
 import image3 from "../assets/images/image-3.png";
@@ -39,8 +38,8 @@ const Collection = () => {
         </div>
         <div className="paragraph">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-            illum fuga temporibus molestias nostrum deleniti aperiam.
+            Explore our latest collection of trendy and comfortable clothing, designed to fit your lifestyle. From casual tees to stylish jackets, we’ve got something for everyone.
+
           </p>
         </div>
         <div className="row">

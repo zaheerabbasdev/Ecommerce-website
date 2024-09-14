@@ -1,22 +1,22 @@
 /* General Styles */
-.collection-section {
+.bestsellers-section {
   padding: 60px 0;
   background-color: #f8f9fa; /* Light background for contrast */
 }
 
-.collection-section .heading {
+.bestsellers-section .heading {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.collection-section .heading h1 {
+.bestsellers-section .heading h1 {
   font-size: 2.5rem;
   font-weight: bold;
   color: #333;
   margin-bottom: 15px;
 }
 
-.collection-section .paragraph p {
+.bestsellers-section .paragraph p {
   font-size: 1.2rem;
   color: #666;
   text-align: center;
@@ -27,12 +27,12 @@
 }
 
 /* Card Styles */
-.collection-section .card-body {
+.bestsellers-section .card-body {
   margin-bottom: 30px; /* Adjusted margin for better spacing */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.collection-section .card {
+.bestsellers-section .card {
   background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
@@ -46,7 +46,7 @@
 /* Hover Effect for Card */
 
 /* Image Styles */
-.collection-section .card img {
+.bestsellers-section .card img {
   width: 100%; /* Ensure the image spans the full width of the card */
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image covers the container */
@@ -57,29 +57,28 @@
 }
 
 /* Optional: If you want to make the image larger on hover */
-.collection-section .card:hover img {
+.bestsellers-section .card:hover img {
   transform: scale(1.1); /* Slightly enlarge the image on hover */
 }
 
 /* Card Text */
-/* Card Text */
-.collection-section .card p {
+.bestsellers-section .card p {
   font-size: 1.1rem;
   color: #333;
   margin: 15px 0;
-  white-space: nowrap;           /* Forces the text to be in one line */
-  overflow: hidden;              /* Hides any overflow text */
-  text-overflow: ellipsis;       /* Adds ellipsis (...) if the text is too long */
+  white-space: nowrap; /* Forces the text to be in one line */
+  overflow: hidden; /* Hides any overflow text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) if the text is too long */
 }
 
-.collection-section .card h4 {
+.bestsellers-section .card h4 {
   font-size: 1.5rem;
   color: #28a745; /* Price color */
   margin: 0;
 }
 
 /* Responsive Layout */
-.collection-section .row {
+.bestsellers-section .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; /* Distribute space between cards */
@@ -89,31 +88,62 @@
   right: 25px;
 }
 
-.collection-section .col-md-2 {
+.bestsellers-section .col-md-2 {
   flex: 0 0 calc(20% - 15px); /* 5 cards per row, with gap adjustment */
   max-width: calc(20% - 15px); /* Ensure cards fit evenly */
   padding: 7.5px;
 }
 
+/*Customer Support Section*/
+.customer-support {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.customer-support .col-md-4 {
+  text-align: center;
+  padding: 20px;
+}
+
+.customer-support .col-md-4 img {
+  max-width: 100px; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.customer-support .col-md-4 h6 {
+  font-weight: bold;
+}
+
+.customer-support .col-md-4 p {
+  font-size: 1rem;
+  color: #333;
+  margin: 5px 0;
+}
+
+.customer-support .col-md-4 p:first-of-type {
+  color: #4c4c4c; /* Accent color for headers */
+}
+
 @media (max-width: 992px) {
-  .collection-section .col-md-2 {
+  .bestsellers-section .col-md-2 {
     flex: 0 0 calc(25% - 15px); /* Adjusted for 4 cards per row */
     max-width: calc(25% - 15px);
   }
 }
 
 @media (max-width: 768px) {
-  .collection-section .col-md-2 {
+  .bestsellers-section .col-md-2 {
     flex: 0 0 calc(50% - 15px); /* Adjusted for 2 cards per row */
     max-width: calc(50% - 15px);
   }
 
-  .collection-section .card-body {
+  .bestsellers-section .card-body {
     margin-bottom: 30px; /* Adjusted margin for better spacing */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .collection-section .card {
+  .bestsellers-section .card {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -129,18 +159,18 @@
 }
 
 @media (max-width: 576px) {
-  .collection-section .col-md-2 {
+  .bestsellers-section .col-md-2 {
     flex: 0 0 100%; /* 1 card per row on very small screens */
     max-width: 100%;
     margin-bottom: 20px; /* Add space between rows on small screens */
   }
 
-  .collection-section .card-body {
+  .bestsellers-section .card-body {
     margin-bottom: 30px; /* Adjusted margin for better spacing */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .collection-section .card {
+  .bestsellers-section .card {
     background-color: #fff;
     border-radius: 8px;
     overflow: hidden;
@@ -152,5 +182,50 @@
     top: 0;
     left: 25px;
     width: 100%;
+  }
+}
+
+/*Media Quries Customer Support Section*/
+@media (max-width: 992px) {
+  .customer-support .col-md-4 {
+    padding: 15px;
+  }
+
+  .customer-support .col-md-4 img {
+    max-width: 80px; /* Smaller icon size for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .customer-support .col-md-4 {
+    padding: 10px;
+  }
+
+  .customer-support .col-md-4 img {
+    max-width: 60px; /* Smaller icon size for small screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .customer-support .col-md-4 {
+    padding: 10px;
+    text-align: left; /* Left-align text on very small screens */
+    margin-left: 100px;
+  }
+
+  .customer-support .col-md-4 img {
+    max-width: 50px; /* Even smaller icon size for very small screens */
+    margin-left: 80px;
+  }
+
+  .customer-support .col-md-4 h6 {
+    margin-left: 20px;
+  }
+
+  .customer-support .col-md-4 p {
+    font-size: 0.9rem;
+    position: relative;
+    top: 0;
+    right: 15px;
   }
 }

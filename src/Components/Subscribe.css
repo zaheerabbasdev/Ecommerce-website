@@ -1,0 +1,75 @@
+/* General Styles */
+.subscribe-section {
+  padding: 60px 0;
+  background-color: #f8f9fa; /* Light background for contrast */
+  text-align: center;
+}
+
+.subscribe-section .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-section .col-md-4 {
+  max-width: 600px; /* Limit the width of the content */
+  margin: 0 auto;
+}
+
+.subscribe-section h4 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.subscribe-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.6; /* Improve readability */
+}
+
+.subscribe-section input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.subscribe-section button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary-dark); /* Primary button color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-section button:hover {
+  background-color: var(--primary-light); /* Darker shade for hover effect */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .subscribe-section h4 {
+    font-size: 1.5rem;
+  }
+
+  .subscribe-section p {
+    font-size: 1rem;
+  }
+
+  .subscribe-section input[type="text"] {
+    font-size: 0.9rem;
+  }
+
+  .subscribe-section button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
