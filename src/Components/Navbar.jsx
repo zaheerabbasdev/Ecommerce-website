@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import "../assets/styles/colors.css";
-import abbas from '../assets/images/hero_image.png'
+import abbas from '../assets/images/ecommerce.webp'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
