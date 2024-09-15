@@ -7,6 +7,8 @@ import BestSellers from "./Components/BestSellers";
 import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
+import MainCollection from "./Components/MainCollection";
+
 
 function App() {
   return (
@@ -14,10 +16,11 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/collection" element={<Collection />} />
+        <Route path="/" element={<Collection />} />
         <Route path="/bestseller" element={<BestSellers />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+         <Route path="/collection" element={<MainCollection />} />
       </Routes>
       <Footer /> {/* Render Footer outside of Routes to make it visible on all pages */}
     </Router>
