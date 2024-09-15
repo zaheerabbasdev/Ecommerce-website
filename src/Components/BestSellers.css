@@ -7,6 +7,7 @@
 .bestsellers-section .heading {
   text-align: center;
   margin-bottom: 30px;
+
 }
 
 .bestsellers-section .heading h1 {
@@ -106,7 +107,7 @@
 }
 
 .customer-support .col-md-4 img {
-  max-width: 100px; /* Adjust as needed */
+  max-width: 50px; /* Adjust as needed */
   height: auto;
   margin-bottom: 15px;
 }
