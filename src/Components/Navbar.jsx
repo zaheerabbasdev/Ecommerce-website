@@ -1,15 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link
 import "./Navbar.css";
 import "../assets/styles/colors.css";
-import abbas from '../assets/images/ecommerce.webp'
+
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isContentVisible, setIsContentVisible] = useState(true);
+ 
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
-    setIsContentVisible(!isContentVisible); // Toggle Hero section visibility
   };
 
   return (
@@ -28,13 +28,12 @@ const Navbar = () => {
               </a>
             </div>
             <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#collection">Collection</a></li>
-              <li><a href="#bestsellers">Best Seller</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/collection">Collection</Link></li>
+              <li><Link to="/bestseller">Best Seller</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/contact">Contact Us</Link></li>
               
-
               <li className="nav-icon search-container">
                 <input type="text" name="text" id="text" placeholder="Search Here" />
                 <i className="fa-solid fa-magnifying-glass"></i>
@@ -56,35 +55,7 @@ const Navbar = () => {
         </div>
       </header>
 
-      <section className={`hero-section ${!isContentVisible ? 'slide-down' : ''}`} id="home">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h1>
-                Unleash Your Shopping Experience
-              </h1>
-              <p>
-                Explore our exclusive collection of high-quality products designed to meet all your needs. From the latest trends to timeless essentials, we have something for everyone. Enjoy seamless shopping with unbeatable deals and exceptional service. Start your journey with us today and discover what makes Zaheer's Store your go-to destination for all things amazing. Shop now and experience the difference!.
-              </p>
-              <a
-                href="https://www.fiverr.com/zaheerabbas65?up_rollout=true"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                Shop Now
-              </a>
-            </div>
-            <div className="col-md-6">
-              <img
-                src={abbas} // Adjust the path as needed
-                alt="Zaheer Abbas"
-                className="img-fluid rounded"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+     
     </>
   );
 };

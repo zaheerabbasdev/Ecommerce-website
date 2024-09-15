@@ -1,0 +1,94 @@
+/* Contact.css */
+
+/* Style for the contact section */
+.contact-section {
+  padding: 60px 15px;
+  background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+.contact-section .row {
+  margin-bottom: 30px;
+}
+
+/* Style for the main heading */
+.contact-section h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333; /* Darker text color for readability */
+}
+
+/* Style for the image */
+.contact-section img {
+  width: 100%;
+  max-width: 100%; /* Ensures image fits within the column */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Slight rounding of corners */
+}
+
+/* Style for contact information */
+.contact-section .col-md-6 {
+  padding: 15px;
+}
+
+.contact-section h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #555; /* Medium dark color for sub-headings */
+}
+
+.contact-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #666; /* Light gray color for text */
+}
+
+.contact-section a {
+  display: block;
+  font-size: 1rem;
+  color: #007bff; /* Primary color for links */
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.contact-section a:hover {
+  text-decoration: underline; /* Underline on hover for better user interaction */
+}
+
+/* Style for the button */
+.contact-section button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact-section button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .contact-section h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .contact-section h4 {
+    font-size: 1.25rem; /* Adjust sub-heading size */
+  }
+
+  .contact-section button {
+    font-size: 0.875rem; /* Smaller button text on mobile */
+    padding: 8px 16px; /* Adjust button padding */
+  }
+}

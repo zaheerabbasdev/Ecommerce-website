@@ -1,16 +1,26 @@
-import Navbar from "./Components/Navbar"; 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./Components/Navbar";
+import Home from "./Components/Home";
 import Collection from "./Components/Collection";
 import BestSellers from "./Components/BestSellers";
+import About from "./Components/About";
 import Footer from "./Components/Footer";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
-      <Collection />
-      <BestSellers/>
-      <Footer/>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/bestseller" element={<BestSellers />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer /> {/* Render Footer outside of Routes to make it visible on all pages */}
+    </Router>
   );
 }
 
