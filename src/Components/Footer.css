@@ -1,0 +1,114 @@
+.footer {
+  background-color: var(--primary-dark);
+  color: #ffffff;
+  padding: 40px 0;
+
+}
+
+.footer .row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 30px;
+}
+
+.footer h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.footer p,
+.footer a {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.footer .text-justify {
+  text-align: justify;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 25px;
+}
+
+.footer ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon {
+  width: 35px; /* Reduced the size of the images */
+  height: 35px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* Follow Us Links Styling */
+.footer ul li a span {
+  margin-left: 5px;
+}
+
+.footer ul li a:hover span {
+  color: #f1f1f1;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.bottom-footer {
+    padding: 10px;
+    background: var(--primary-light);
+    text-align: center;
+    margin-top: 20px; 
+    position: relative; 
+    top: 40px;
+    bottom: 0; 
+    width: 100%; 
+}
+
+.text-copyright{
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer .row {
+    flex-direction: column;
+  }
+
+  .footer .col-md-4,
+  .footer .col-md-3,
+  .footer .col-md-2 {
+    margin-bottom: 20px;
+  }
+}
+
+/* Button Hover Effect for Social Links */
+.footer ul li a span:hover {
+  text-decoration: none;
+}
+
+/* Contact Info Styling */
+.footer ul li a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+
+

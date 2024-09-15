@@ -1,7 +1,7 @@
 import Navbar from "./Components/Navbar"; 
 import Collection from "./Components/Collection";
 import BestSellers from "./Components/BestSellers";
-import Subscribe from "./Components/Subscribe";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Navbar />
       <Collection />
       <BestSellers/>
-      <Subscribe/>
+      <Footer/>
     </div>
   );
 }
