@@ -1,6 +1,6 @@
 import React from "react";
 import "./MainCollection.css";
-import Cards from "./Cards"; // Correct import
+import Cards from "./Cards"; 
 import image1 from "../assets/images/image-1.png";
 import image2 from "../assets/images/image-2.png";
 import image3 from "../assets/images/image-3.png";
@@ -233,70 +233,65 @@ const MainCollection = () => {
   ];
 
   return (
-    <div>
-      <div className="maincollection-section" id="maincollection">
-        <div className="row">
-          <h1>Filters</h1>
-          <div className="filter-section Category">
-            <h6>Categories</h6>
-            <label>
-              <input type="checkbox" />
-              Men
-            </label>
-            <br />
-            <label>
-              <input type="checkbox" />
-              Women
-            </label>
-            <br />
-            <label>
-              <input type="checkbox" />
-              Kids
-            </label>
-          </div>
-
-          <div className="filter-section types">
-            <h6>Types</h6>
-            <label>
-              <input type="checkbox" />
-              Topwear
-            </label>
-            <br />
-            <label>
-              <input type="checkbox" />
-              Bottomwear
-            </label>
-            <br />
-            <label>
-              <input type="checkbox" />
-              Winterwear
-            </label>
-          </div>
-
-          <div className="col-md-4 collection">
-            <h3>All Collections</h3>
-            <form action="">
-              <select name="" id="">
-                <option value="1">Sort by: Relavent</option>
-                <option value="2">Sort by: Low to High</option>
-                <option value="3">Sort by: High to Low</option>
-              </select>
-            </form>
-            <div className="row">
-              {cardData.map((card, index) => (
-                <div className="col-md-2" key={index}>
-                  <Cards
-                    image={card.image}
-                    title={card.title}
-                    price={card.price}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+    <div className="maincollection-section" id="maincollection">
+  <div className="row">
+    {/* Filter Section */}
+    <div className="col-md-3 filter-section">
+      <h1>Filters</h1>
+      <div className="filter-category-section">
+        <h6>Categories</h6>
+        <label>
+          <input type="checkbox" />
+          Men
+        </label>
+        <label>
+          <input type="checkbox" />
+          Women
+        </label>
+        <label>
+          <input type="checkbox" />
+          Kids
+        </label>
+      </div>
+      <div className="filter-type-section">
+        <h6>Types</h6>
+        <label>
+          <input type="checkbox" />
+          Topwear
+        </label>
+        <label>
+          <input type="checkbox" />
+          Bottomwear
+        </label>
+        <label>
+          <input type="checkbox" />
+          Winterwear
+        </label>
       </div>
     </div>
+
+    {/* Collection Section */}
+    <div className="col-md-8 collection-section">
+      <div className="collection-header">
+        <h3>All Collections</h3>
+        <select>
+          <option value="1">Sort by: Relevant</option>
+          <option value="2">Sort by: Low to High</option>
+          <option value="3">Sort by: High to Low</option>
+        </select>
+      </div>
+
+      <div className="row">
+        {cardData.map((card, index) => (
+          <div className="col-md-3 col-sm-6 mb-4" key={index}>
+            <Cards image={card.image} title={card.title} price={card.price} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+
   );
 };
 
