@@ -12,14 +12,36 @@
   margin-bottom: 30px;
 }
 
+.maincollection-section h1{
+  margin-left: 110px;
+  position: relative;
+  top: 50px;
+}
+
+
 /* Categories and Types Container */
-.filter-section {
+.Category {
   border: 1px solid #ccc;
   width: 20%;
   height: 20%;
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
+  position: relative;
+  top: 80px;
+  left: 120px;
+}
+
+.types {
+  border: 1px solid #ccc;
+  width: 20%;
+  height: 20%;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+  top: 250px;
+  right: 180px;
 }
 
 /* Heading Styles */
@@ -77,21 +99,20 @@
   }
 }
 
-
 /* Sorting Dropdown */
 .collection select {
-  width: 100%;
+  width: 45%;
   padding: 10px;
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   transition: border-color 0.3s ease;
+  position: relative;
+  left: 600px;
+  bottom: 55px;
 }
 
-.collection select:hover {
-  border-color: #28a745;
-}
 
 /* Cards Section */
 .collection .row {
@@ -178,7 +199,8 @@
     padding: 10px;
   }
 
-  .filter h3, .collection h3 {
+  .filter h3,
+  .collection h3 {
     font-size: 1.5rem;
   }
 
