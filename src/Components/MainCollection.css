@@ -4,8 +4,20 @@
   background-color: #fff;
   border-radius: 5px;
   margin-top: 100px;
+  position: relative; 
 }
 
+.filter-section h1 {
+  margin-top: -50px; 
+  position: relative; 
+  top: 35px;
+  left: 120px;
+  z-index: 1; 
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Other styles remain unchanged */
 .filter-section h6 {
   margin-top: 20px;
   font-size: 1.2rem;
@@ -30,16 +42,23 @@
 .filter-category-section,
 .filter-type-section {
   border: 1px solid #ccc;
-  width: 100%; /* Adjust to your desired width */
+  width: 70%; /* Adjust to your desired width */
   padding: 15px;
   border-radius: 5px;
   margin-bottom: 20px;
+  margin-left: 120px;
   background-color: #f9f9f9; /* Optional: adjust background color */
+  position: relative;
+  top: 65px;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .filter-category-section h6,
 .filter-type-section h6 {
   margin-top: 0; /* Reset margin-top */
+  font-size: 1rem;
 }
 
 /* Collection Section */
@@ -100,17 +119,6 @@
   color: #666;
   margin-bottom: 5px;
 }
-
-/* .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} */
-/* 
-.card-price {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #ff5722;
-} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

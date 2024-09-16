@@ -254,7 +254,7 @@ const MainCollection = () => {
         </label>
       </div>
       <div className="filter-type-section">
-        <h6>Types</h6>
+        <h6>Type</h6>
         <label>
           <input type="checkbox" />
           Topwear
