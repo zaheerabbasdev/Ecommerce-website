@@ -21,36 +21,34 @@ import image17 from "../assets/images/image-17.png";
 import image18 from "../assets/images/image-18.png";
 import image19 from "../assets/images/image-19.png";
 import image20 from "../assets/images/image-20.png";
-import image21 from "../assets/images/image-1.png";
-import image22 from "../assets/images/image-2.png";
-import image23 from "../assets/images/image-3.png";
-import image24 from "../assets/images/image-4.png";
-import image25 from "../assets/images/image-5.png";
-import image26 from "../assets/images/image-6.png";
-import image27 from "../assets/images/image-7.png";
-import image28 from "../assets/images/image-8.png";
-import image29 from "../assets/images/image-9.png";
-import image30 from "../assets/images/image-10.png";
-import image31 from "../assets/images/image-11.png";
-import image32 from "../assets/images/image-12.png";
-import image33 from "../assets/images/image-13.png";
-import image34 from "../assets/images/image-14.png";
-import image35 from "../assets/images/image-15.png";
-import image36 from "../assets/images/image-16.png";
-import image37 from "../assets/images/image-17.png";
-import image38 from "../assets/images/image-18.png";
-import image39 from "../assets/images/image-19.png";
-import image40 from "../assets/images/image-20.png";
-import image41 from "../assets/images/image-11.png";
-import image42 from "../assets/images/image-12.png";
-import image43 from "../assets/images/image-13.png";
-import image44 from "../assets/images/image-14.png";
-import image45 from "../assets/images/image-15.png";
-import image46 from "../assets/images/image-16.png";
-import image47 from "../assets/images/image-17.png";
-import image48 from "../assets/images/image-18.png";
-import image49 from "../assets/images/image-19.png";
-import image50 from "../assets/images/image-20.png";
+import image21 from "../assets/images/image-21.png";
+import image22 from "../assets/images/image-22.png";
+import image23 from "../assets/images/image-23.png";
+import image24 from "../assets/images/image-24.png";
+import image25 from "../assets/images/image-25.png";
+import image26 from "../assets/images/image-26.png";
+import image27 from "../assets/images/image-27.png";
+import image28 from "../assets/images/image-28.png";
+import image29 from "../assets/images/image-29.png";
+import image30 from "../assets/images/image-30.png";
+import image32 from "../assets/images/image-32.png";
+import image33 from "../assets/images/image-33.png";
+import image34 from "../assets/images/image-34.png";
+import image35 from "../assets/images/image-35.png";
+import image36 from "../assets/images/image-36.png";
+import image37 from "../assets/images/image-37.png";
+import image38 from "../assets/images/image-38.png";
+import image39 from "../assets/images/image-39.png";
+import image40 from "../assets/images/image-40.png";
+import image41 from "../assets/images/image-41.png";
+import image42 from "../assets/images/image-42.png";
+import image43 from "../assets/images/image-43.png";
+import image44 from "../assets/images/image-44.png";
+import image46 from "../assets/images/image-46.png";
+import image47 from "../assets/images/image-47.png";
+import image48 from "../assets/images/image-48.png";
+import image49 from "../assets/images/image-49.png";
+import image50 from "../assets/images/image-50.png";
 const MainCollection = () => {
 
 
@@ -160,8 +158,6 @@ const MainCollection = () => {
       title: "Women Zip-Front Relaxed Fit Jacket",
       price: "$150",
     },
-
-    { image: image31, title: "Kid Tapered Slim Fit Trouser", price: "$76" },
     {
       image: image32,
       title: "Men Round Neck Pure Cotton T-shirt",
@@ -212,11 +208,7 @@ const MainCollection = () => {
       title: "Women Zip-Front Relaxed Fit Jacket",
       price: "$120",
     },
-    {
-      image: image45,
-      title: "Men Tapered Fit Flat-Front Trousers",
-      price: "$150",
-    },
+    
     { image: image46, title: "PGirls Round Neck Cotton Top", price: "$76" },
     {
       image: image47,
@@ -273,6 +265,7 @@ const MainCollection = () => {
     {/* Collection Section */}
     <div className="col-md-8 collection-section">
       <div className="collection-header">
+      
         <h3>All Collections</h3>
         <select>
           <option value="1">Sort by: Relevant</option>

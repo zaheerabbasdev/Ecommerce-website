@@ -1,15 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import "./Navbar.css";
 import "../assets/styles/colors.css";
 
-
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
- 
+  const navigate = useNavigate(); // React Router's navigate function
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Handle navigation when the search bar is clicked
+  const handleSearchClick = () => {
+    navigate("/collection"); // Immediately navigate to the collection page
   };
 
   return (
@@ -33,9 +37,16 @@ const Navbar = () => {
               <li><Link to="/bestseller">Best Seller</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
-              
+
+              {/* Search bar container */}
               <li className="nav-icon search-container">
-                <input type="text" name="text" id="text" placeholder="Search Here" />
+                <input
+                  type="text"
+                  name="text"
+                  id="text"
+                  placeholder="Search Here"
+                  onClick={handleSearchClick} // Navigate immediately when clicked
+                />
                 <i className="fa-solid fa-magnifying-glass"></i>
               </li>
 
@@ -54,8 +65,6 @@ const Navbar = () => {
           </nav>
         </div>
       </header>
-
-     
     </>
   );
 };
