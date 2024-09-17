@@ -39,24 +39,26 @@ import image35 from "../assets/images/image-35.png";
 // import image36 from "../assets/images/image-36.png";
 import image37 from "../assets/images/image-37.png";
 import image38 from "../assets/images/image-38.png";
-// import image39 from "../assets/images/image-39.png";
-// import image40 from "../assets/images/image-40.png";
+import image39 from "../assets/images/image-39.png";
+import image40 from "../assets/images/image-40.png";
 import image41 from "../assets/images/image-41.png";
 // import image42 from "../assets/images/image-42.png";
-// import image43 from "../assets/images/image-43.png";
+import image43 from "../assets/images/image-43.png";
 // import image44 from "../assets/images/image-44.png";
 // import image46 from "../assets/images/image-46.png";
 // import image47 from "../assets/images/image-47.png";
-// import image48 from "../assets/images/image-48.png";
+import image48 from "../assets/images/image-48.png";
 // import image49 from "../assets/images/image-49.png";
 // import image50 from "../assets/images/image-50.png";
+
 
 
 const MainCollection = () => {
 
 
-  const [selectedCategories, setSelectedCategories] = useState([]);
-  const [selectedTypes, setSelectedTypes] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState(""); // Single category
+  const [selectedType, setSelectedType] = useState(""); // Single type
+  const [sortOrder, setSortOrder] = useState(""); // For sorting order
 
 
   
@@ -98,43 +100,66 @@ const MainCollection = () => {
   // { image: image36, title: "Girls Embroidered Long-Sleeve Top", price: "$95", category: "Kids", type: "Topwear" },
   { image: image37, title: "Women Zipper Hooded Jacket", price: "$125", category: "Women", type: "Winterwear" },
   { image: image38, title: "Kid Slim Fit Stretch Pants", price: "$100", category: "Kids", type: "Bottomwear" },
-  // { image: image39, title: "Men Casual Cotton Shirt", price: "$135", category: "Men", type: "Topwear" },
-  // { image: image40, title: "Women Double-Layer Winter Jacket", price: "$200", category: "Women", type: "Winterwear" },
+  { image: image39, title: "Men Casual Cotton Shirt", price: "$135", category: "Men", type: "Topwear" },
+  { image: image40, title: "Women Double-Layer Winter Jacket", price: "$200", category: "Women", type: "Winterwear" },
   { image: image41, title: "Kid Slim Fit Sweatpants", price: "$90", category: "Kids", type: "Bottomwear" },
   // { image: image42, title: "Men Graphic Long-Sleeve T-Shirt", price: "$95", category: "Men", type: "Topwear" },
-  // { image: image43, title: "Boy Casual Printed T-Shirt", price: "$70", category: "Kids", type: "Topwear" },
+  { image: image43, title: "Boy Casual Printed T-Shirt", price: "$70", category: "Kids", type: "Topwear" },
   // { image: image44, title: "Women Insulated Winter Parka", price: "$180", category: "Women", type: "Winterwear" },
   // { image: image46, title: "Girls Casual Cotton T-Shirt", price: "$75", category: "Kids", type: "Topwear" },
   // { image: image47, title: "Women Sherpa Lined Winter Jacket", price: "$175", category: "Women", type: "Winterwear" },
-  // { image: image48, title: "Kid Slim Fit Cotton Pants", price: "$90", category: "Kids", type: "Bottomwear" },
+  { image: image48, title: "Kid Slim Fit Cotton Pants", price: "$90", category: "Kids", type: "Bottomwear" },
   // { image: image49, title: "Men Regular Fit Button-Down Shirt", price: "$140", category: "Men", type: "Topwear" },
   // { image: image50, title: "Women High-Neck Quilted Jacket", price: "$190", category: "Women", type: "Winterwear" },
 ];
 
-// Function to handle the change in category filters
+
+
+
+ // Function to handle the change in category filters (only one can be selected at a time)
   const handleCategoryChange = (e) => {
-    const { value, checked } = e.target;
-    setSelectedCategories((prev) =>
-      checked ? [...prev, value] : prev.filter((category) => category !== value)
-    );
+    const { value } = e.target;
+    setSelectedCategory(value === selectedCategory ? "" : value); // Toggle selection
   };
 
-  // Function to handle the change in type filters
+  // Function to handle the change in type filters (only one can be selected at a time)
   const handleTypeChange = (e) => {
-    const { value, checked } = e.target;
-    setSelectedTypes((prev) =>
-      checked ? [...prev, value] : prev.filter((type) => type !== value)
-    );
+    const { value } = e.target;
+    setSelectedType(value === selectedType ? "" : value); // Toggle selection
   };
 
-  // Filter the card data based on selected categories and types
+
+
+  // Handle sorting option change
+  const handleSortChange = (e) => {
+    setSortOrder(e.target.value); // Set the selected sort order
+  };
+
+  // Parse price from string and return as a number for comparison
+  const getPriceValue = (priceString) => parseFloat(priceString.replace('$', ''));
+
+
+
+  // Filter the card data based on selected category and type
   const filteredCards = cardData.filter((card) => {
-    const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(card.category);
-    const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(card.type);
+    const categoryMatch = !selectedCategory || card.category === selectedCategory;
+    const typeMatch = !selectedType || card.type === selectedType;
     return categoryMatch && typeMatch;
   });
 
-  return (
+
+    // Sort the filtered data based on price
+  const sortedCards = [...filteredCards].sort((a, b) => {
+    if (sortOrder === "lowToHigh") {
+      return getPriceValue(a.price) - getPriceValue(b.price); // Low to High
+    } else if (sortOrder === "highToLow") {
+      return getPriceValue(b.price) - getPriceValue(a.price); // High to Low
+    } else {
+      return 0; // Default order (no sorting)
+    }
+  });
+
+return (
     <div className="maincollection-section" id="maincollection">
       <div className="row">
         {/* Filter Section */}
@@ -146,6 +171,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Men"
+                checked={selectedCategory === "Men"}
                 onChange={handleCategoryChange}
               />
               Men
@@ -154,6 +180,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Women"
+                checked={selectedCategory === "Women"}
                 onChange={handleCategoryChange}
               />
               Women
@@ -162,6 +189,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Kids"
+                checked={selectedCategory === "Kids"}
                 onChange={handleCategoryChange}
               />
               Kids
@@ -173,6 +201,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Topwear"
+                checked={selectedType === "Topwear"}
                 onChange={handleTypeChange}
               />
               Topwear
@@ -181,6 +210,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Bottomwear"
+                checked={selectedType === "Bottomwear"}
                 onChange={handleTypeChange}
               />
               Bottomwear
@@ -189,6 +219,7 @@ const MainCollection = () => {
               <input
                 type="checkbox"
                 value="Winterwear"
+                checked={selectedType === "Winterwear"}
                 onChange={handleTypeChange}
               />
               Winterwear
@@ -200,15 +231,15 @@ const MainCollection = () => {
         <div className="col-md-8 collection-section">
           <div className="collection-header">
             <h3>All Collections</h3>
-            <select>
-              <option value="1">Sort by: Relevant</option>
-              <option value="2">Sort by: Low to High</option>
-              <option value="3">Sort by: High to Low</option>
+            <select value={sortOrder} onChange={handleSortChange}>
+              <option value="">Sort by: Relevant</option>
+              <option value="lowToHigh">Sort by: Low to High</option>
+              <option value="highToLow">Sort by: High to Low</option>
             </select>
           </div>
 
           <div className="row">
-            {filteredCards.map((card, index) => (
+            {sortedCards.map((card, index) => (
               <div className="col-md-3 col-sm-6 mb-4" key={index}>
                 <Cards image={card.image} title={card.title} price={card.price} />
               </div>

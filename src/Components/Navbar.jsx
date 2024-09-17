@@ -34,7 +34,7 @@ const Navbar = () => {
             <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/collection">Collection</Link></li>
-              <li><Link to="/bestseller">Best Seller</Link></li>
+              {/* <li><Link to="/bestseller">Best Seller</Link></li> */}
               <li><Link to="/about">About</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
 
