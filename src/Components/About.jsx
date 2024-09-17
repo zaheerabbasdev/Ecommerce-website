@@ -38,30 +38,28 @@ const About = () => {
           </div>
         </div>
 
-        <div className="why-choose-us-section">
-          <h2>Why to choose Us</h2>
-          <div className="row">
+        <div className="why-choose-us-section container">
+          <h2>Why Choose Us</h2>
+          <div className="row justify-content-center">
             <div className="col-md-4">
-              <h4>Quality Assurance:</h4>
+              <h4>Quality Assurance</h4>
               <p>
                 We meticulously select and vet each product to ensure it meets
                 our stringent quality standards.
               </p>
             </div>
-
             <div className="col-md-4">
-              <h4>Convenience:</h4>
+              <h4>Convenience</h4>
               <p>
                 With our user-friendly interface and hassle-free ordering
                 process, shopping has never been easier.
               </p>
             </div>
-
             <div className="col-md-4">
-              <h4>Exceptional Customer Service:</h4>
+              <h4>Exceptional Customer Service</h4>
               <p>
-                Our team of dedicated professionals is here to assist you the
-                way, ensuring your satisfaction is our top priority.
+                Our team of dedicated professionals is here to assist you,
+                ensuring your satisfaction is our top priority.
               </p>
             </div>
           </div>

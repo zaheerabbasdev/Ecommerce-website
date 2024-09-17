@@ -17,9 +17,9 @@ const Contact = () => {
 
           <div className="col-md-6">
             <h4>Our Store</h4>
-            <p>54709 Willms Station Suite 350, Washington, USA</p>
-            <a href="tel:0313980499">Tel: (415) 555-0132</a>
-            <a href="milto:zabbas09220@gmail.com">Email: admin@forever.com</a>
+            <p>Village Tano Tehsil Lahor Distt Swabi</p>
+            <a href="tel:+923139804929">Tel: +923139804929</a>
+            <a href="milto:zabbas092002@gmail.com">Email: zabbas092002@gmail.com</a>
             <h5>Careers at Forever</h5>
             <p>Learn more about our teams and job openings.</p>
             <button>Explore More</button>

@@ -17,7 +17,6 @@
   font-weight: bold;
 }
 
-/* Other styles remain unchanged */
 .filter-section h6 {
   margin-top: 20px;
   font-size: 1.2rem;
@@ -38,7 +37,6 @@
   margin-right: 8px;
 }
 
-/* Specific styles for the category and type sections */
 .filter-category-section,
 .filter-type-section {
   border: 1px solid #ccc;
@@ -47,12 +45,9 @@
   border-radius: 5px;
   margin-bottom: 20px;
   margin-left: 120px;
-  background-color: #f9f9f9; /* Optional: adjust background color */
+  background-color: #f9f9f9;
   position: relative;
   top: 65px;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .filter-category-section h6,
@@ -120,17 +115,89 @@
   margin-bottom: 5px;
 }
 
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
-  .filter-section,
+  .filter-section {
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  .filter-section h1 {
+    font-size: 1.2rem;
+    left: 0;
+    text-align: center;
+  }
+
+  .filter-category-section,
+  .filter-type-section {
+    width: 100%; /* Full width on tablets */
+    margin-left: 0;
+    top: 30px;
+  }
+
   .collection-section {
-    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  .collection-header h3 {
+    font-size: 1.3rem; /* Adjust header font size */
+  }
+
+  .collection-header select {
+    font-size: 0.875rem;
+    padding: 6px;
   }
 
   .card {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Increased spacing between cards on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-section {
+    padding: 50px;
+    margin-top: 30px;
+  }
+
+  .filter-section h1 {
+    font-size: 1rem;
+    top: 10px;
+  }
+
+  .filter-category-section,
+  .filter-type-section {
+    width: 100%; /* Full width on mobile */
+    margin-left: 0;
+    padding: 10px;
+    top: 10px;
+  }
+
+  .collection-section {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .collection-header h3 {
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+
+  .collection-header select {
+    font-size: 0.75rem;
+    padding: 5px;
+    margin-right: 20px;
+  }
+
+  .card {
+    padding: 10px;
+    margin-bottom: 15px; /* More compact on mobile */
+  }
+
+  .card h5 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.875rem;
   }
 }
