@@ -10,7 +10,7 @@
 .filter-section h1 {
   margin-top: -50px; 
   position: relative; 
-  top: 35px;
+  top: 45px;
   left: 120px;
   z-index: 1; 
   font-size: 1.5rem;
@@ -47,7 +47,7 @@
   margin-left: 120px;
   background-color: #f9f9f9;
   position: relative;
-  top: 65px;
+  top: 85px;
 }
 
 .filter-category-section h6,
@@ -55,6 +55,33 @@
   margin-top: 0; /* Reset margin-top */
   font-size: 1rem;
 }
+/* Ensure these styles are included in your MainCollection.css or another relevant CSS file */
+
+.search-bar-container {
+  margin-bottom: 20px; /* Adds space below the search bar */
+  text-align: center; /* Centers the search bar within the container */
+}
+
+.search-bar-container input {
+  width: 100%; /* Makes the input field span the full width of its container */
+  max-width: 400px; /* Sets a maximum width for larger screens */
+  padding: 8px; /* Adds space inside the input field */
+  font-size: 16px; /* Sets the font size inside the input field */
+  border-radius: 5px; /* Rounds the corners of the input field */
+  border: 1px solid #ddd; /* Adds a light border around the input field */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+  outline: none; /* Removes the default outline when the input field is focused */
+  position: relative;
+  top: 10px;
+  left: 140px;
+  background-color: #f0f0f0;
+}
+
+.search-bar-container input:focus {
+  border-color: #007bff; /* Changes border color on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2); /* Changes shadow on focus */
+}
+
 
 /* Collection Section */
 .collection-section {
