@@ -39,7 +39,7 @@ const Navbar = () => {
               <li><Link to="/contact">Contact Us</Link></li>
 
               {/* Search bar container */}
-              <li className="nav-icon search-container">
+              {/* <li className="nav-icon search-container">
                 <input
                   type="text"
                   name="text"
@@ -48,7 +48,7 @@ const Navbar = () => {
                   onClick={handleSearchClick} // Navigate immediately when clicked
                 />
                 <i className="fa-solid fa-magnifying-glass"></i>
-              </li>
+              </li> */}
 
               <li className="nav-icon">
                 <a href="#cart">

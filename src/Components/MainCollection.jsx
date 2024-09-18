@@ -466,17 +466,19 @@ const MainCollection = () => {
         <div className="col-md-8 collection-section">
           <div className="collection-header">
             <h3>All Collections</h3>
-            <div className="search-bar-container">
+           <div className="search-bar-container">
+              <div className="search-icon">
+                <i className="fas fa-search"></i> {/* Font Awesome search icon */}
+              </div>
               <input
                 type="text"
                 placeholder="Search Here"
                 value={searchTerm}
                 onChange={handleSearchChange}
               />
-              
             </div>
             <select value={sortOrder} onChange={handleSortChange}>
-              <option value="">Sort by: Relevant</option>
+              <option value="">Sort by Price: Relevant</option>
               <option value="lowToHigh">Sort by: Low to High</option>
               <option value="highToLow">Sort by: High to Low</option>
             </select>
