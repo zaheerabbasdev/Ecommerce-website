@@ -227,6 +227,10 @@
     font-size: 0.75rem;
     padding: 5px;
     margin-right: 20px;
+    width: 38%; /* Adjust width to make it smaller on mobile */
+    position: relative;
+    top: 0;
+    right: 25px;
   }
 
   .card {
@@ -241,49 +245,67 @@
   .card p {
     font-size: 0.875rem;
   }
-
-
 }
 
 
-/* Responsive Design for Search Bar*/
+
+
+/* Responsive Design for Search Bar */
 @media only screen and (max-width: 768px) {
   .search-bar-container {
     margin: 20px auto; /* Center the search bar */
-    left: 0;
-    width: 30%; /* Make the search bar wider on tablets */
+    width: 25%; /* Increase width for better usability */
+    padding: 0; /* Remove extra padding */
+    position: absolute;
+    top: 0;
+    right: 40px;
+  }
+
+  .search-icon {
+    position: absolute; /* Ensure the icon is positioned correctly */
+    left: 10px; /* Adjust left positioning */
+    font-size: 20px; /* Ensure icon size is appropriate */
+    color: #333; /* Ensure icon color is consistent */
+    pointer-events: none; /* Prevent interaction with the icon */
   }
 
   .search-bar-container input {
-    max-width: 100%; /* Remove max-width restriction on tablets */
-    padding: 7px 15px; /* Increase padding for better usability */
+    width: 100%; /* Full width of the container */
+    padding: 4px 40px 7px 35px; /* Ensure padding accommodates the icon */
     font-size: 14px; /* Adjust font size for tablets */
+    border-radius: 5px; /* Ensure rounded corners */
+    border: 1px solid #ddd; /* Ensure border is consistent */
   }
 
-  
-.search-bar-container input::placeholder{
-  padding-left: 20px;
-}
+  .search-bar-container input::placeholder {
+    color: #333; /* Ensure placeholder text color is appropriate */
+  }
 }
 
 @media only screen and (max-width: 576px) {
   .search-bar-container {
     margin: 15px auto; /* Center and reduce margin on mobile */
-    width: 35%; /* Make the search bar even wider on mobile */
-    padding: 0 10px; /* Add horizontal padding */
-  }
-
-  .search-bar-container input {
-    padding: 5px 15px; /* Increase padding for mobile */
-    font-size: 12px; /* Adjust font size for mobile */
-    border-radius: 4px; /* Slightly reduce border radius on mobile */
+    width: 37%; /* Increase width for mobile */
+    padding: 0; /* Remove extra padding */
+    position: absolute; /* Ensure relative positioning */
+    top: -45px;
+    left: 210px;
   }
 
   .search-icon {
     font-size: 18px; /* Slightly reduce icon size on mobile */
-    left: 20px; /* Adjust icon position on mobile */
+    left: 10px; /* Adjust icon position on mobile */
+  }
+
+  .search-bar-container input {
+    width: 100%; /* Full width of the container */
+    padding: 5px 35px 5px 30px; /* Ensure padding accommodates the icon */
+    font-size: 12px; /* Adjust font size for mobile */
+    border-radius: 4px; /* Slightly reduce border radius on mobile */
+    border: 1px solid #ddd; /* Ensure border is consistent */
+  }
+
+  .search-bar-container input::placeholder {
+    color: #333; /* Ensure placeholder text color is appropriate */
   }
 }
-
-
-
