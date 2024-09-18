@@ -151,12 +151,16 @@ nav {
 
   .nav-list li {
     text-align: center;
-    width: 100%;
+    width: 122%;
     background: linear-gradient(
       to top,
       var(--primary-dark),
       var(--primary-light)
     );
+    position: relative;
+    top: 0;
+    left: 30px;
+
   }
 
   .nav-list li a {
