@@ -1,0 +1,38 @@
+.product-detail-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-image {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.sizes button {
+  margin: 5px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.related-images-grid {
+  display: flex;
+  margin-top: 20px;
+}
+
+.related-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+  cursor: pointer;
+}
