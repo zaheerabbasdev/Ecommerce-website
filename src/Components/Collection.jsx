@@ -49,7 +49,7 @@ const Collection = () => {
       price: "$100",
       reviews: 70,
       description: "Easy cotton T-shirt...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image1, image2],
     },
        {
@@ -59,7 +59,7 @@ const Collection = () => {
       price: "$100",
       reviews: 70,
       description: "Easy cotton T-shirt...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image1, image2],
     },
     // Add other products
