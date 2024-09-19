@@ -23,7 +23,8 @@ function App() {
         {/* <Route path="/bestseller" element={<BestSellers />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-         <Route path="/collection" element={<MainCollection />} />
+        <Route path="/Collection" element={<MainCollection />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
       </Routes>
       <Footer /> {/* Render Footer outside of Routes to make it visible on all pages */}
     </Router>

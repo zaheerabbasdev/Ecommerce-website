@@ -20,7 +20,7 @@ const Collection = () => {
       reviews: 122,
       description: "A lightweight, pullover shirt...",
       sizes: ["S", "M", "L", "XL", "XXL"],
-      relatedImages: [image1, image2],
+      relatedImages: [image1],
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ const Collection = () => {
       reviews: 98,
       description: "Comfortable cotton T-shirt...",
       sizes: ["S", "M", "L"],
-      relatedImages: [image1, image2],
+      relatedImages: [image2],
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ const Collection = () => {
       reviews: 10,
       description: "Comfortable cotton S-shirt...",
       sizes: ["S", "M", "L"],
-      relatedImages: [image1, image2],
+      relatedImages: [image3],
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ const Collection = () => {
       reviews: 70,
       description: "Easy cotton T-shirt...",
       sizes: ["S", "M", "L", "XL", "XXL"],
-      relatedImages: [image1, image2],
+      relatedImages: [image4],
     },
        {
       id: 5,
@@ -60,7 +60,7 @@ const Collection = () => {
       reviews: 70,
       description: "Easy cotton T-shirt...",
       sizes: ["S", "M", "L", "XL", "XXL"],
-      relatedImages: [image1, image2],
+      relatedImages: [image5],
     },
     // Add other products
   ];
