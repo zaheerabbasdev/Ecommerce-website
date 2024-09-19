@@ -26,7 +26,7 @@ const MainCollection = () => {
       type: "Bottomwear",
       reviews: 122,
       description: "A lightweight, pullover shirt...",
-      sizes: ["S", "M", "L", "XL"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image1],
     },
     {
@@ -38,7 +38,7 @@ const MainCollection = () => {
       type: "Topwear",
       reviews: 98,
       description: "Comfortable cotton T-shirt...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image2],
     },
     {
@@ -50,7 +50,7 @@ const MainCollection = () => {
       type: "Topwear",
       reviews: 45,
       description: "Comfortable cotton T-shirt for boys...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image3],
     },
     {
@@ -62,7 +62,7 @@ const MainCollection = () => {
       type: "Winterwear",
       reviews: 150,
       description: "Warm and cozy winter jacket...",
-      sizes: ["M", "L", "XL", "XXL"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image4],
     },
     {
@@ -74,7 +74,7 @@ const MainCollection = () => {
       type: "Bottomwear",
       reviews: 200,
       description: "Stylish trousers for formal occasions...",
-      sizes: ["M", "L", "XL"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image5],
     },
   ];
