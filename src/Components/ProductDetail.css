@@ -131,3 +131,27 @@
 .thumbnail:hover {
   border-color: #ddd; /* Highlight on hover */
 }
+
+/*  Stying for Size buttons */
+.size-btn {
+  background-color: #f0f0f0;   
+  color: #333;                 
+  border: 2px solid #ccc;      
+  padding: 8px 16px;          
+  margin: 5px;                
+  font-size: 14px;             
+  border-radius: 4px;         
+  cursor: pointer;             
+  transition: background-color 0.3s ease, color 0.3s ease;  
+}
+
+.size-btn:hover {
+  background-color: #ddd;
+}
+
+.size-btn.selected {
+  background-color: var(--primary-light);  
+  color: white;                
+  border: 2px solid #ff6f61;   
+}
+
