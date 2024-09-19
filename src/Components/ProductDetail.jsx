@@ -15,7 +15,7 @@ const ProductDetail = () => {
 
   const handleAddToCart = () => {
     if (!selectedSize) {
-      setErrorMessage('Please select Size.');
+      setErrorMessage('Please Select Size First.');
       return;
     }
     

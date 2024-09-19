@@ -155,3 +155,31 @@
   border: 2px solid #ff6f61;   
 }
 
+/* Styling of Error Message */
+
+.error-message {
+  color: #ff4040;
+  background-color: #ffe6e6;       
+  border: 1px solid #ff4040;      
+  padding: 10px;                  
+  margin-top: 40px;              
+  border-radius: 5px;           
+  font-size: 14px;                
+  font-weight: bold;               
+  text-align: center;             
+  position: relative;
+  top: 30px;     
+  right: 120px;       
+  animation: popInFromRight 0.5s ease; 
+}
+
+@keyframes popInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%); /* Start from the right side */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);    /* End at the original position */
+  }
+}
