@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './ProductDetail.css';
 import { useLocation } from 'react-router-dom'; // For accessing state passed through navigate
 
@@ -7,6 +7,11 @@ const ProductDetail = () => {
   const { product } = location.state; // Retrieve product data from state
 
   const [selectedImage, setSelectedImage] = useState(product.image); // Default to the main product image
+
+  // Use useEffect to scroll to the top when the component is rendered
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
+  }, []);
 
   return (
     <div className="product-detail">
