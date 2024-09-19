@@ -47,7 +47,7 @@ const ProductDetail = () => {
                 src={image}
                 alt={`thumbnail ${index}`}
                 className="thumbnail"
-                onClick={() => setSelectedImage(image)}
+                onClick={() => setSelectedImage(image)} // Set the selected image on click
               />
             ))}
           </div>

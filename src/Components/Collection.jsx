@@ -13,7 +13,7 @@ const Collection = () => {
 
   const cardData = [
     {
-      id: 1,  // Unique ID for each product
+      id: 6,  // Unique ID for each product
       image: image1,
       title: "Kid Tapered Slim Fit Trouser",
       price: "$38",
@@ -23,27 +23,27 @@ const Collection = () => {
       relatedImages: [image1],
     },
     {
-      id: 2,
+      id: 7,
       image: image2,
       title: "Men Round Neck Pure Cotton T-shirt",
       price: "$85",
       reviews: 98,
       description: "Comfortable cotton T-shirt...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image2],
     },
     {
-      id: 3,
+      id: 8,
       image: image3,
       title: "Boy Round Neck Pure Cotton T-shirt",
       price: "$90",
       reviews: 10,
       description: "Comfortable cotton S-shirt...",
-      sizes: ["S", "M", "L"],
+      sizes: ["S", "M", "L", "XL", "XXL"],
       relatedImages: [image3],
     },
     {
-      id: 4,
+      id: 9,
       image: image4,
       title: "Girl Round Neck Pure Cotton T-shirt",
       price: "$100",
@@ -53,7 +53,7 @@ const Collection = () => {
       relatedImages: [image4],
     },
        {
-      id: 5,
+      id: 10,
       image: image5,
       title: "Girl Round Neck Pure Cotton T-shirt",
       price: "$100",

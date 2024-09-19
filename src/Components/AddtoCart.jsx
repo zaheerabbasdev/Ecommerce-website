@@ -9,8 +9,6 @@ const Cart = () => {
   const shippingFee = 10; // Example shipping fee
   const total = subtotal + shippingFee;
 
-  
-
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
@@ -20,11 +18,12 @@ const Cart = () => {
         ) : (
           cartItems.map((item) => (
             <div className="cart-item" key={item.id}>
-              <img src={item.image} alt={item.name} className="cart-item-image" />
+              {/* Display the selected image in the cart */}
+              <img src={item.selectedImage} alt={item.name} className="cart-item-image" />
               <div className="cart-item-details">
-                <h3>{item.name}</h3>
+                <h3>{item.title}</h3>
                 <p>${item.price}</p>
-                <span className="cart-item-size">Size: {item.size}</span>
+                <span className="cart-item-size">Size: {item.selectedSize}</span>
                 <p>Quantity: {item.quantity}</p>
               </div>
               <button className="btn" onClick={() => removeFromCart(item.id)}>

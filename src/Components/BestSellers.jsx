@@ -17,7 +17,7 @@ const BestSellers = () => {
   // Array with product details including id, image, title, price, reviews, description, and sizes
   const bestSellersData = [
     {
-      id: 1,
+      id: 11,
       image: image1,
       title: "Men's Premium T-shirt",
       price: "$60",
@@ -27,7 +27,7 @@ const BestSellers = () => {
       relatedImages: [image1],
     },
     {
-      id: 2,
+      id: 12,
       image: image2,
       title: "Women's Cotton Dress",
       price: "$120",
@@ -37,7 +37,7 @@ const BestSellers = () => {
       relatedImages: [image2],
     },
     {
-      id: 3,
+      id: 13,
       image: image3,
       title: "Unisex Hoodie",
       price: "$90",
@@ -47,7 +47,7 @@ const BestSellers = () => {
       relatedImages: [image3],
     },
     {
-      id: 4,
+      id: 14,
       image: image4,
       title: "Women's High Waist Jeans",
       price: "$80",
@@ -57,7 +57,7 @@ const BestSellers = () => {
       relatedImages: [image4],
     },
     {
-      id: 5,
+      id: 15,
       image: image5,
       title: "Men's Leather Jacket",
       price: "$150",
