@@ -122,10 +122,28 @@ nav {
 }
 
 
-
-.cart-count{
-  color: black;
+/*Styling for Cart Count*/
+.cart-count {
+  background-color: #000000;  /* Add a vibrant background color (e.g., a soft red) */
+  color: white;               /* White text for better contrast */
+  font-weight: bold;          /* Bold the text */
+  padding: 4px 6px;           /* Add some padding for a better look */
+  border-radius: 50%;         /* Make it circular (or rounded) */
+  font-size: 10px;            /* Adjust the font size */
+  display: inline-block;      /* Ensures proper alignment */
+  min-width: 24px;            /* Set a minimum width to maintain size */
+  text-align: center;         /* Center the text inside the circle */
+  position: absolute;         /* Allow positioning within a parent element (like a cart icon) */
+  top: -10px;                 /* Position it slightly above the cart icon */
+  right: -15px;               /* Position it slightly to the right of the cart icon */
 }
+
+.cart-count:hover {
+  background-color: var(--primary-light);  /* Darken the background color on hover */
+  cursor: pointer;            /* Show pointer cursor when hovering */
+  transition: background-color 0.3s ease;  /* Smooth transition for hover effect */
+}
+
 /* Mobile-specific styles */
 @media only screen and (max-width: 798px) {
   .nav-container {
