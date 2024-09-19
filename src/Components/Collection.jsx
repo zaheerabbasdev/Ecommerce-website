@@ -7,6 +7,8 @@ import image2 from "../assets/images/image-2.png";
 import image3 from "../assets/images/image-2.png";
 import image4 from "../assets/images/image-2.png";
 import image5 from "../assets/images/image-2.png";
+import star from "../assets/images/star.png";
+
 
 const Collection = () => {
   const navigate = useNavigate();
@@ -17,9 +19,10 @@ const Collection = () => {
       image: image1,
       title: "Kid Tapered Slim Fit Trouser",
       price: "$38",
-      reviews: 122,
-      description: "A lightweight, pullover shirt...",
+      reviewsCount: 123,
+      description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
       sizes: ["S", "M", "L", "XL", "XXL"],
+      description2:"100% Original product. Cash on delivery is available on this product. Easy return and exchange policy within 7 days.",
       relatedImages: [image1],
     },
     {
@@ -27,9 +30,10 @@ const Collection = () => {
       image: image2,
       title: "Men Round Neck Pure Cotton T-shirt",
       price: "$85",
-      reviews: 98,
-      description: "Comfortable cotton T-shirt...",
+      reviewsCount: 123,
+      description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
       sizes: ["S", "M", "L", "XL", "XXL"],
+      description2:"100% Original product. Cash on delivery is available on this product. Easy return and exchange policy within 7 days.",
       relatedImages: [image2],
     },
     {
@@ -37,9 +41,10 @@ const Collection = () => {
       image: image3,
       title: "Boy Round Neck Pure Cotton T-shirt",
       price: "$90",
-      reviews: 10,
-      description: "Comfortable cotton S-shirt...",
+      reviewsCount: 123,
+      description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
       sizes: ["S", "M", "L", "XL", "XXL"],
+      description2:"100% Original product. Cash on delivery is available on this product. Easy return and exchange policy within 7 days.",
       relatedImages: [image3],
     },
     {
@@ -47,9 +52,10 @@ const Collection = () => {
       image: image4,
       title: "Girl Round Neck Pure Cotton T-shirt",
       price: "$100",
-      reviews: 70,
+      reviewsCount: 123,
       description: "Easy cotton T-shirt...",
       sizes: ["S", "M", "L", "XL", "XXL"],
+      description2:"100% Original product. Cash on delivery is available on this product. Easy return and exchange policy within 7 days.",
       relatedImages: [image4],
     },
        {
@@ -57,9 +63,10 @@ const Collection = () => {
       image: image5,
       title: "Girl Round Neck Pure Cotton T-shirt",
       price: "$100",
-      reviews: 70,
-      description: "Easy cotton T-shirt...",
+      reviewsCount: 123,
+      description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
       sizes: ["S", "M", "L", "XL", "XXL"],
+      description2:"100% Original product. Cash on delivery is available on this product. Easy return and exchange policy within 7 days.",
       relatedImages: [image5],
     },
     // Add other products

@@ -2,6 +2,8 @@ import React, { useEffect, useState, useContext } from 'react';
 import './ProductDetail.css';
 import { useLocation } from 'react-router-dom';
 import { CartContext } from './CartContext';
+import star from '../assets/images/star.png'; // Path to star image
+import starEmpty from '../assets/images/star-light.png'; // Path to empty star image
 
 const ProductDetail = () => {
   const location = useLocation();
@@ -54,9 +56,20 @@ const ProductDetail = () => {
         </div>
         <div className="product-info">
           <h1>{product.title}</h1>
-          <p className="price">Price: {product.price}</p>
-          <p className="reviews">Reviews: {product.reviews}</p>
+          <p className="price">{product.price}</p>
+          <div className="stars">
+            {[...Array(5)].map((_, index) => (
+              <img
+                key={index}
+                src={index < product.stars ? star : starEmpty}
+                alt="star"
+                className="star"
+              />
+            ))}
+             <span className="review-count">({product.reviewsCount})</span> {/* Display review count */}
+          </div>
           <p className="description">{product.description}</p>
+          <p className="description2">{product.description2}</p> 
           <div className="sizes">
             <h3>Select Sizes</h3>
             {product.sizes.map((size, index) => (
@@ -71,6 +84,7 @@ const ProductDetail = () => {
           </div>
           <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
           {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Display error message */}
+          
         </div>
       </div>
     </div>
