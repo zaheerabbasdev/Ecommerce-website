@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
+import { CartContext } from "./CartContext";
 import "./Navbar.css";
 import "../assets/styles/colors.css";
 
 const Navbar = () => {
+  const { cartItems } = useContext(CartContext); // Access cart items from context
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate(); // React Router's navigate function
 
@@ -25,20 +27,31 @@ const Navbar = () => {
           </div>
           <nav>
             <div className="nav-mobile">
-              <a id="nav-toggle" href="#!" onClick={toggleMobileMenu}>
+              <a
+                id="nav-toggle"
+                href="javascript:void(0);" // Prevents page from jumping to top
+                onClick={toggleMobileMenu}
+              >
                 <span
                   className={`hamburger ${isMobileMenuOpen ? "active" : ""}`}
                 ></span>
               </a>
             </div>
             <ul className={`nav-list ${isMobileMenuOpen ? "open" : ""}`}>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/collection">Collection</Link></li>
-              {/* <li><Link to="/bestseller">Best Seller</Link></li> */}
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/collection">Collection</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact Us</Link>
+              </li>
 
-              {/* Search bar container */}
+              {/* Uncomment the search bar if you need it */}
               {/* <li className="nav-icon search-container">
                 <input
                   type="text"
@@ -50,16 +63,21 @@ const Navbar = () => {
                 <i className="fa-solid fa-magnifying-glass"></i>
               </li> */}
 
+              {/* Cart Icon with item count */}
               <li className="nav-icon">
-                <a href="#cart">
-                  <i className="fa-solid fa-cart-shopping"></i>
-                </a>
+                <Link to="/cart">
+                  <i className="fa-solid fa-shopping-cart"></i>
+                  {cartItems.length > 0 && (
+                    <span className="cart-count">{cartItems.length}</span> // Display item count
+                  )}
+                </Link>
               </li>
 
+              {/* User Icon */}
               <li className="nav-icon">
-                <a href="#user">
+                <Link to="/user">
                   <i className="fa-solid fa-user"></i>
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

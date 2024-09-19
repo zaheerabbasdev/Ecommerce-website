@@ -1,12 +1,34 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import './ProductDetail.css';
-import { useLocation } from 'react-router-dom'; // For accessing state passed through navigate
+import { useLocation } from 'react-router-dom';
+import { CartContext } from './CartContext';
 
 const ProductDetail = () => {
   const location = useLocation();
   const { product } = location.state; // Retrieve product data from state
-
   const [selectedImage, setSelectedImage] = useState(product.image); // Default to the main product image
+  const [selectedSize, setSelectedSize] = useState(null); // State for selected size
+  const [errorMessage, setErrorMessage] = useState(''); // Error message if size is not selected
+
+  // Access the addToCart function from context
+  const { addToCart } = useContext(CartContext);
+
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      setErrorMessage('Please select Size.');
+      return;
+    }
+    
+    // Add the product along with the selected image and size to the cart
+    addToCart({
+      ...product,
+      selectedImage, // Adding the selected image to the product object
+      selectedSize,  // Adding the selected size to the product object
+    });
+
+    // Clear error message once product is added to cart
+    setErrorMessage('');
+  };
 
   // Use useEffect to scroll to the top when the component is rendered
   useEffect(() => {
@@ -38,10 +60,17 @@ const ProductDetail = () => {
           <div className="sizes">
             <h3>Select Sizes</h3>
             {product.sizes.map((size, index) => (
-              <button key={index} className="size-btn">{size}</button>
+              <button
+                key={index}
+                className={`size-btn ${selectedSize === size ? 'selected' : ''}`} // Highlight selected size
+                onClick={() => setSelectedSize(size)} // Set selected size
+              >
+                {size}
+              </button>
             ))}
           </div>
-          <button className="add-to-cart-btn">Add to Cart</button>
+          <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
+          {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Display error message */}
         </div>
       </div>
     </div>

@@ -8,12 +8,14 @@ import About from "./Components/About";
 import Footer from "./Components/Footer";
 import Contact from "./Components/Contact";
 import MainCollection from "./Components/MainCollection";
-import ProductDetail from './Components/ProductDetail'; // New Component
-
+import ProductDetail from './Components/ProductDetail'; 
+import Cart from './Components/AddtoCart';
+import { CartProvider } from './Components/CartContext';
 
 
 function App() {
   return (
+    <CartProvider>
     <Router>
       <Navbar />
       <Routes>
@@ -25,9 +27,11 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/Collection" element={<MainCollection />} />
         <Route path="/product/:id" element={<ProductDetail />} />
+         <Route path="/cart" element={<Cart />} />
       </Routes>
-      <Footer /> {/* Render Footer outside of Routes to make it visible on all pages */}
+      <Footer /> 
     </Router>
+    </CartProvider>
   );
 }
 
