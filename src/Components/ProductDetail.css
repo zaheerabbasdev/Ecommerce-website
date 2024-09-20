@@ -213,8 +213,8 @@
   font-weight: bold;               
   text-align: center;             
   position: relative;
-  top: 30px;     
-  right: 120px;       
+  top: -590px;     
+  left: 100px;    
   animation: popInFromRight 0.5s ease; 
 }
 

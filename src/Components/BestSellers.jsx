@@ -115,14 +115,14 @@ const BestSellers = () => {
           </div>
         </div>
 
-        <div className="row1 subscription">
+        {/* <div className="row1 subscription">
           <h4>Subscribe now & get 20% off</h4>
           <p>
             Stay updated with our latest offers and promotions. Subscribe to our newsletter and enjoy an exclusive 20% discount.
           </p>
           <input type="text" name="email" id="email" placeholder="Enter your email" />
           <button>Subscribe</button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

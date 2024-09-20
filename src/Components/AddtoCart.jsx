@@ -1,11 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
-import './AddtoCart.css'
+import './AddtoCart.css';
 
 const Cart = () => {
-  const { cartItems, removeFromCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, updateCartItemQuantity } = useContext(CartContext);
+  const [quantities, setQuantities] = useState(
+    cartItems.reduce((acc, item) => {
+      acc[item.id] = item.quantity;
+      return acc;
+    }, {})
+  );
 
-  const subtotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+  const handleQuantityChange = (id, newQuantity) => {
+    const quantity = parseInt(newQuantity, 10);
+    if (!isNaN(quantity) && quantity > 0) {
+      setQuantities((prevQuantities) => ({
+        ...prevQuantities,
+        [id]: quantity,
+      }));
+      updateCartItemQuantity(id, quantity); // Function to update quantity in the context or state
+    }
+  };
+
+  const subtotal = cartItems.reduce((total, item) => total + item.price * quantities[item.id], 0);
   const shippingFee = 10; // Example shipping fee
   const total = subtotal + shippingFee;
 
@@ -22,9 +39,19 @@ const Cart = () => {
               <img src={item.selectedImage} alt={item.name} className="cart-item-image" />
               <div className="cart-item-details">
                 <h3>{item.title}</h3>
-                <p>${item.price}</p>
-                <span className="cart-item-size">Size: {item.selectedSize}</span>
-                <p>Quantity: {item.quantity}</p>
+                <p>{item.price}</p>
+                <span className="cart-item-size">{item.selectedSize}</span>
+                <div className="cart-item-quantity">
+                  <label htmlFor={`quantity-${item.id}`}></label>
+                  <input
+                    type="number"
+                    id={`quantity-${item.id}`}
+                    value={quantities[item.id]}
+                    onChange={(e) => handleQuantityChange(item.id, e.target.value)}
+                    min="1"
+                    className="quantity-input"
+                  />
+                </div>
               </div>
               <button className="btn" onClick={() => removeFromCart(item.id)}>
                 <i className="fa-solid fa-trash"></i>
