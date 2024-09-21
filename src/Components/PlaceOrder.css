@@ -1,142 +1,151 @@
-/* Container for the place order section */
-.place-order-container {
+/* Main container for the PlaceOrder component */
+.custom-place-order-container {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
-  gap: 20px; /* Added some gap between columns for clarity */
+  gap: 20px; /* Spacing between sections */
+  padding: 20px;
+  background-color: #f9f9f9;
+  flex-wrap: wrap;
 }
 
-/* Styles for the form and cart totals */
-.delivery-information, 
-.cart-totals, 
-.payment-method {
-  flex-basis: 48%;
-  font-family: 'Arial', sans-serif;
+/* Styling for the form section */
+.custom-delivery-information {
+  width: 30%;
+  min-width: 280px; /* For smaller screens */
+  /* background-color: #fff; */
+  padding: 20px;
+  /* border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  top: 0;
+  left: 110px;
+}
+.custom-cart-totals {
+  width: 30%;
+  min-width: 280px;
+  /* background-color: #fff; */
+  padding: 15px; /* Reduced padding to decrease height */
+  /* border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  top: 10px;
+  left: 400px;
+  height: auto; /* Let content define the height */
+  max-height: 250px; /* Set a maximum height if you want to limit it */
+  overflow-y: auto; /* Adds a scroll if content exceeds max-height */
+}
+.custom-payment-method {
+  width: 30%;
+  min-width: 280px; /* For smaller screens */
+  /* background-color: #fff; */
+  padding: 15px; /* Reduced padding to decrease height */
+  /* border-radius: 8px; */
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+  position: relative;
+  top: 250px;
+  right: 115px;
+  height: auto; /* Let content define the height */
+  max-height: 300px; /* Set a maximum height to limit the overall size */
+  overflow-y: auto; /* Adds a scroll if content exceeds max-height */
 }
 
-/* Header for the sections */
-h2 {
-  font-size: 24px;
+
+/* Section titles */
+.custom-delivery-information h2,
+.custom-cart-totals h2,
+.custom-payment-method h2 {
+  font-size: 20px;
   font-weight: bold;
-  color: #2c2c2c;
-  margin-bottom: 20px;
-}
-
-/* Optional subtext in header */
-h2 span {
-  font-weight: normal;
-  color: #999;
-}
-
-/* Form layout */
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
   margin-bottom: 15px;
 }
 
-.row input {
-  flex-basis: 48%;
-  padding: 10px;
+.custom-delivery-information h2 span,
+.custom-cart-totals h2 span,
+.custom-payment-method h2 span {
+  color: #ff3333; /* Accent color for section titles */
+}
+
+/* Input field styling */
+.custom-delivery-information input[type="text"],
+.custom-delivery-information input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: border-color 0.3s ease;
 }
 
-/* Full width inputs */
-input[type="email"], 
-input[type="text"], 
-input[type="phone"] {
-  width: 100%;
+.custom-delivery-information input[type="text"]:focus,
+.custom-delivery-information input[type="email"]:focus {
+  border-color: #ff3333;
+  outline: none;
 }
 
-/* Cart summary styling */
-.cart-totals {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-  top: -50px;
-  left: 200px;
+/* Row container for input fields */
+.custom-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.summary-item {
+.custom-row input {
+  flex: 1;
+}
+
+/* Cart Totals section styling */
+.custom-summary-item {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #eee;
 }
 
-/* Total amount styling */
-.summary-item.total {
+.custom-summary-item.custom-total {
   font-weight: bold;
   font-size: 18px;
 }
 
-/* Payment section */
-.payment-method {
-  margin-top: 30px;
-  position: relative;
-  top: 280px;
+/* Payment Method section styling */
+.custom-payment-options div {
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
-.payment-options {
-  display: flex;
-  justify-content: space-around;
-}
-
-.payment-options div {
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
-}
-
-.payment-options label {
-  margin-left: 5px;
-}
-
-/* Radio buttons for payment methods */
-input[type="radio"] {
-  margin-right: 5px;
+.custom-payment-options input[type="radio"] {
+  margin-right: 10px;
 }
 
 /* Button styling */
-
-/* Button styling */
-.place-order-button {
-  padding: 12px 28px; /* Adjusted padding */
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Bold text */
+.custom-place-order-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
   border: none;
   border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
-  margin-top: 20px; /* Space above button */
-  text-align: center;
-  display: block;
-  width: 100%; /* Full width button */
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
 }
 
-/* Hover effect */
-.place-order-button:hover {
-  background-color: #ff3333; /* Red hover effect */
-  transform: scale(1.05); /* Slightly enlarge button on hover */
+.custom-place-order-button:hover {
+  background-color: #ff3333;
 }
 
-/* Media queries for responsiveness */
+/* Responsive styling */
 @media (max-width: 768px) {
-  .place-order-container {
+  .custom-place-order-container {
     flex-direction: column;
   }
 
-  .delivery-information, 
-  .cart-totals {
-    flex-basis: 100%;
-    margin-bottom: 30px;
+  .custom-delivery-information,
+  .custom-cart-totals,
+  .custom-payment-method {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
