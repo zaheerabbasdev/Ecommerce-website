@@ -11,6 +11,7 @@ import MainCollection from "./Components/MainCollection";
 import ProductDetail from './Components/ProductDetail'; 
 import Cart from './Components/AddtoCart';
 import { CartProvider } from './Components/CartContext';
+import PlaceOrder from './Components/PlaceOrder';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/Collection" element={<MainCollection />} />
         <Route path="/product/:id" element={<ProductDetail />} />
-         <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
       </Routes>
       <Footer /> 
     </Router>

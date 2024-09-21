@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./CartContext";
+import { useNavigate } from 'react-router-dom';
 import './AddtoCart.css';
 
 const Cart = () => {
@@ -11,6 +12,11 @@ const Cart = () => {
     }, {})
   );
 
+
+  // Initialize navigate hook
+  const navigate = useNavigate();
+
+  
   const handleQuantityChange = (id, newQuantity) => {
     const quantity = parseInt(newQuantity, 10);
     if (!isNaN(quantity) && quantity > 0) {
@@ -25,6 +31,11 @@ const Cart = () => {
   const subtotal = cartItems.reduce((total, item) => total + item.price * quantities[item.id], 0);
   const shippingFee = 10; // Example shipping fee
   const total = subtotal + shippingFee;
+
+
+   const handleProceedToCheckout = () => {
+    navigate('/place-order'); // Adjust the route as needed
+  };
 
   return (
     <div className="cart-container">
@@ -77,7 +88,7 @@ const Cart = () => {
             <strong>${total.toFixed(2)}</strong>
           </div>
         </div>
-        <button className="checkout-button">Proceed to Checkout</button>
+        <button className="checkout-button" onClick={handleProceedToCheckout}>Proceed to Checkout</button>
       </div>
     </div>
   );

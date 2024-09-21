@@ -1,0 +1,142 @@
+/* Container for the place order section */
+.place-order-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 20px; /* Added some gap between columns for clarity */
+}
+
+/* Styles for the form and cart totals */
+.delivery-information, 
+.cart-totals, 
+.payment-method {
+  flex-basis: 48%;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Header for the sections */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c2c2c;
+  margin-bottom: 20px;
+}
+
+/* Optional subtext in header */
+h2 span {
+  font-weight: normal;
+  color: #999;
+}
+
+/* Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.row input {
+  flex-basis: 48%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Full width inputs */
+input[type="email"], 
+input[type="text"], 
+input[type="phone"] {
+  width: 100%;
+}
+
+/* Cart summary styling */
+.cart-totals {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  top: -50px;
+  left: 200px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+/* Total amount styling */
+.summary-item.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Payment section */
+.payment-method {
+  margin-top: 30px;
+  position: relative;
+  top: 280px;
+}
+
+.payment-options {
+  display: flex;
+  justify-content: space-around;
+}
+
+.payment-options div {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.payment-options label {
+  margin-left: 5px;
+}
+
+/* Radio buttons for payment methods */
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Button styling */
+
+/* Button styling */
+.place-order-button {
+  padding: 12px 28px; /* Adjusted padding */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  margin-top: 20px; /* Space above button */
+  text-align: center;
+  display: block;
+  width: 100%; /* Full width button */
+}
+
+/* Hover effect */
+.place-order-button:hover {
+  background-color: #ff3333; /* Red hover effect */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .place-order-container {
+    flex-direction: column;
+  }
+
+  .delivery-information, 
+  .cart-totals {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+}
