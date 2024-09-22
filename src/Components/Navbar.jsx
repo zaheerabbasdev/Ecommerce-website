@@ -67,9 +67,9 @@ const Navbar = () => {
               <li className="nav-icon">
                 <Link to="/cart">
                   <i className="fa-solid fa-shopping-cart"></i>
-                  {cartItems.length > 0 && (
-                    <span className="cart-count">{cartItems.length}</span> // Display item count
-                  )}
+                  <span className="cart-count">
+                    {cartItems.length > 0 ? cartItems.length : 0}
+                  </span> {/* Display item count or 0 */}
                 </Link>
               </li>
 
