@@ -49,7 +49,7 @@ const SignUp = () => {
           <Link to="/forgot-password" className="forget-pass">Forgot your password?</Link>
           <Link to="/login" className="login">Login Here</Link>
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="Sign-up">Sign Up</button>
       </form>
     </div>
   );

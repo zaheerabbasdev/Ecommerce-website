@@ -44,7 +44,7 @@ input {
     color: #000;
 }
 
-button {
+.Sign-up {
   background-color: #000;
   color: #fff;
   padding: 10px 15px;
@@ -55,6 +55,6 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+.Sign-up:hover {
   background-color: #333;
 }
