@@ -12,7 +12,8 @@ import ProductDetail from './Components/ProductDetail';
 import Cart from './Components/AddtoCart';
 import { CartProvider } from './Components/CartContext';
 import PlaceOrder from './Components/PlaceOrder';
-
+import Login from "./Components/Login";       
+import SignUp from "./Components/SignUp";
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/login" element={<Login />} /> 
+        <Route path="/signup" element={<SignUp />} />
+
       </Routes>
       <Footer /> 
     </Router>

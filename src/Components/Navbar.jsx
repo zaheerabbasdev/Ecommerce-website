@@ -75,7 +75,7 @@ const Navbar = () => {
 
               {/* User Icon */}
               <li className="nav-icon">
-                <Link to="/user">
+                <Link to="/login">
                   <i className="fa-solid fa-user"></i>
                 </Link>
               </li>
