@@ -1,4 +1,4 @@
-/* SignUp.css */
+/* Scoped styles using .signup-container */
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -11,15 +11,13 @@
 .signup-container h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  /* border-bottom: 1px solid #333; */
-  display: inline-block;
 }
 
-form {
+.signup-container form {
   width: 100%;
 }
 
-input {
+.signup-container input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -27,24 +25,24 @@ input {
   border-radius: 5px;
 }
 
-.form-footer {
+.signup-container .form-footer {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
 }
 
-.forget-pass, .login{
-    text-decoration: none;
-    color: #555;
+.signup-container .forget-pass, .signup-container .login {
+  text-decoration: none;
+  color: #555;
 }
 
-.forget-pass:hover, .login:hover{
-    text-decoration: none;
-    cursor: pointer;
-    color: #000;
+.signup-container .forget-pass:hover, .signup-container .login:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
 }
 
-.Sign-up {
+.signup-container .Sign-up {
   background-color: #000;
   color: #fff;
   padding: 10px 15px;
@@ -55,6 +53,6 @@ input {
   border-radius: 5px;
 }
 
-.Sign-up:hover {
+.signup-container .Sign-up:hover {
   background-color: #333;
 }

@@ -5,6 +5,8 @@ import './AddtoCart.css';
 
 const Cart = () => {
   const { cartItems, removeFromCart, updateCartItemQuantity } = useContext(CartContext);
+  
+  // Initialize quantities state with cart items
   const [quantities, setQuantities] = useState(
     cartItems.reduce((acc, item) => {
       acc[item.id] = item.quantity;
@@ -12,11 +14,10 @@ const Cart = () => {
     }, {})
   );
 
-
   // Initialize navigate hook
   const navigate = useNavigate();
 
-  
+  // Handle quantity change
   const handleQuantityChange = (id, newQuantity) => {
     const quantity = parseInt(newQuantity, 10);
     if (!isNaN(quantity) && quantity > 0) {
@@ -24,16 +25,26 @@ const Cart = () => {
         ...prevQuantities,
         [id]: quantity,
       }));
-      updateCartItemQuantity(id, quantity); // Function to update quantity in the context or state
+      updateCartItemQuantity(id, quantity); // Update quantity in context or state
     }
   };
 
-  const subtotal = cartItems.reduce((total, item) => total + item.price * quantities[item.id], 0);
+  // Function to clean price string by removing the '$' symbol and converting to a number
+  const cleanPrice = (price) => {
+    return parseFloat(price.replace('$', ''));
+  };
+
+  // Calculate subtotal by summing up the price * quantity for each item
+  const subtotal = cartItems.reduce((total, item) => {
+    const itemPrice = cleanPrice(item.price); // Clean the price before calculation
+    return total + itemPrice * quantities[item.id];
+  }, 0);
+
   const shippingFee = 10; // Example shipping fee
   const total = subtotal + shippingFee;
 
-
-   const handleProceedToCheckout = () => {
+  // Handle Proceed to Checkout
+  const handleProceedToCheckout = () => {
     navigate('/place-order'); // Adjust the route as needed
   };
 
