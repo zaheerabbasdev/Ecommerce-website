@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { CartContext } from "./CartContext"; // Import CartContext to access cart items
 import "./PlaceOrder.css"; // Add your custom styling
 
 const PlaceOrder = () => {
+  // Accessing cart items and removeFromCart function from CartContext
+  const { cartItems } = useContext(CartContext);
+
   // State to manage form fields and payment method
   const [formData, setFormData] = useState({
     firstName: "",
@@ -44,6 +48,19 @@ const PlaceOrder = () => {
       paymentMethod
     );
   };
+
+  // Function to clean price string by removing the '$' symbol and converting to a number
+  const cleanPrice = (price) => {
+    return parseFloat(price.replace('$', ''));
+  };
+
+  // Calculate subtotal
+  const subtotal = cartItems.reduce((total, item) => {
+    return total + cleanPrice(item.price) * item.quantity; // Assuming quantity is stored in the cartItems
+  }, 0);
+
+  const shippingFee = 10; // Example shipping fee
+  const total = subtotal + shippingFee;
 
   // Handle form submission
   const handlePlaceOrder = () => {
@@ -146,15 +163,15 @@ const PlaceOrder = () => {
         </h2>
         <div className="custom-summary-item">
           <span>Subtotal</span>
-          <span>$0.00</span> {/* Replace with your subtotal logic */}
+          <span>${subtotal.toFixed(2)}</span>
         </div>
         <div className="custom-summary-item">
           <span>Shipping Fee</span>
-          <span>$10.00</span> {/* Replace with your shipping fee logic */}
+          <span>${shippingFee.toFixed(2)}</span>
         </div>
         <div className="custom-summary-item custom-total">
           <strong>Total</strong>
-          <strong>$0.00</strong> {/* Replace with your total calculation */}
+          <strong>${total.toFixed(2)}</strong>
         </div>
       </div>
 
