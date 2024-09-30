@@ -260,7 +260,6 @@
   .product-info .description2,
   .sizes,
   .add-to-cart-btn,
-  .review-count,
   .error-message {
     position: relative;
     top: auto;
@@ -269,12 +268,22 @@
     margin: 10px 0;
   }
 
+  .review-count{
+    position: relative;
+    top: auto;
+    left: 70px ;
+    text-align: center;
+    margin: 10px 0;
+
+  }
+
   .sizes {
     top: 0;
   }
 
   .add-to-cart-btn {
     top: 0;
+    left: 130px;
   }
 
   .main-image {

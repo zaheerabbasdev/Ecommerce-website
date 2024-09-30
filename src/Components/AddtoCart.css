@@ -305,7 +305,7 @@ button i {
     font-size: 12px;
     position: relative;
     top: 0;
-    left: 100px;
+    left: 85px;
   }
 
   .cart-item-size {
@@ -313,7 +313,7 @@ button i {
     font-size: 12px;
     position: relative;
     top: 0;
-    left: 92px;
+    left: 72px;
   }
 
   .quantity-input {
@@ -322,13 +322,13 @@ button i {
     font-size: 12px;
     position: relative;
     top: 5px;
-    left: 87px;
+    left: 68px;
   }
 
   .btn{
     position: relative;
     top: 5px;
-    right: 10px;
+    left: 2px;
   }
 
   .cart-totals h3 {
