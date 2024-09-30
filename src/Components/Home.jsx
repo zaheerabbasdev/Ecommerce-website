@@ -16,7 +16,7 @@ const Home = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-md-6">
-              <h1>Unleash Your Shopping Experience</h1>
+              <h1>Elevate Your Shopping Journey</h1>
               <p>
                 Explore our exclusive collection of high-quality products
                 designed to meet all your needs. From the latest trends to
