@@ -29,6 +29,10 @@
   
 }
 
+.hero-section .btn:hover{
+  color: #000;
+}
+
 .img-fluid {
   max-height: 300%;
   max-width: 100%;
