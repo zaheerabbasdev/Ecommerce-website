@@ -64,10 +64,16 @@ const PlaceOrder = () => {
 
   // Handle form submission
   const handlePlaceOrder = () => {
+    if (cartItems.length === 0) {
+      alert("Your cart is empty. Please add items to your cart before placing an order.");
+      return;
+    }
+
     if (!isFormValid()) {
       alert("Please fill out all required fields and select a payment method.");
       return;
     }
+
     // Add your logic to handle the order submission
     alert(`Order placed with payment method: ${paymentMethod}`);
   };

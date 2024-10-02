@@ -17,6 +17,7 @@ import SignUp from "./Components/SignUp";
 
 function App() {
   return (
+     
     <CartProvider>
     <Router>
       <Navbar />
@@ -33,7 +34,6 @@ function App() {
         <Route path="/place-order" element={<PlaceOrder />} />
         <Route path="/login" element={<Login />} /> 
         <Route path="/signup" element={<SignUp />} />
-
       </Routes>
       <Footer /> 
     </Router>
