@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "./CartContext"; // Import CartContext to access cart items
+import { useNavigate } from "react-router-dom"
 import "./PlaceOrder.css"; // Add your custom styling
 
 const PlaceOrder = () => {
   // Accessing cart items and removeFromCart function from CartContext
   const { cartItems } = useContext(CartContext);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   // State to manage form fields and payment method
   const [formData, setFormData] = useState({
@@ -76,6 +78,15 @@ const PlaceOrder = () => {
 
     // Add your logic to handle the order submission
     alert(`Order placed with payment method: ${paymentMethod}`);
+
+     // Navigate to the Order component after placing the order
+    navigate("/order", {
+      state: {
+        cartItems: cartItems,
+        orderDate: new Date().toLocaleDateString(),
+        paymentMethod: paymentMethod,
+      },
+    });
   };
 
   return (

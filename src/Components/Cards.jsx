@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.css'; // Ensure this path is correct
 
-const Cards = ({ image, title, price }) => {
+const Cards = ({ image, title, price}) => {
   return (
     <div className="card-body">
       <div className="card">

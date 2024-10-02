@@ -1,0 +1,72 @@
+/* Orders.css */
+
+.custom-order-summary {
+  max-width: 800px; /* Limit the width of the order summary */
+  margin: 20px auto; /* Center the summary in the middle of the page */
+  padding: 20px; /* Add some padding around the content */
+  border: 1px solid #ccc; /* Add a border around the summary */
+  border-radius: 8px; /* Round the corners of the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  background-color: #f9f9f9; /* Light background color for better readability */
+}
+
+.custom-order-summary h2 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+  color: #333; /* Dark text color for better contrast */
+}
+
+.custom-order-details {
+  border-top: 2px solid #007bff; /* Add a colored line on top of the details */
+  padding-top: 20px; /* Space between heading and details */
+}
+
+.custom-order-details h3 {
+  color: #007bff; /* Use the same color for consistency */
+  margin-bottom: 15px; /* Space below the order details heading */
+}
+
+.custom-order-item {
+  display: flex; /* Flexbox layout for item details */
+  align-items: center; /* Align items vertically centered */
+  margin-bottom: 15px; /* Space between items */
+  padding: 10px; /* Add some padding around each item */
+  border: 1px solid #ddd; /* Light border around each item */
+  border-radius: 5px; /* Rounded corners for items */
+  background-color: #fff; /* White background for items */
+}
+
+.custom-order-image {
+  width: 80px; /* Set a fixed width for the images */
+  height: 80px; /* Set a fixed height for the images */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 5px; /* Round corners of the image */
+  margin-right: 15px; /* Space between image and text */
+}
+
+.custom-order-info {
+  flex: 1; /* Take the remaining space for item info */
+}
+
+.custom-order-info h4 {
+  margin: 0; /* Remove default margin */
+  color: #333; /* Dark text color */
+}
+
+.custom-order-info p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+.custom-track-order-button {
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* White text color */
+  padding: 10px 15px; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.custom-track-order-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

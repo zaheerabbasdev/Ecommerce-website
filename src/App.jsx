@@ -12,6 +12,7 @@ import ProductDetail from './Components/ProductDetail';
 import Cart from './Components/AddtoCart';
 import { CartProvider } from './Components/CartContext';
 import PlaceOrder from './Components/PlaceOrder';
+import Orders from "./Components/Orders"; 
 import Login from "./Components/Login";       
 import SignUp from "./Components/SignUp";
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/place-order" element={<PlaceOrder />} />
+         <Route path="/order" element={<Orders />} />
         <Route path="/login" element={<Login />} /> 
         <Route path="/signup" element={<SignUp />} />
       </Routes>
