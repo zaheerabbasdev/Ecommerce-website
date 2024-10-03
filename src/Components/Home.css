@@ -26,11 +26,14 @@
   border: none;
   position: relative;
   top: -10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   
 }
 
 .hero-section .btn:hover{
-  color: #000;
+  background-color: var(--primary-light);
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 .img-fluid {

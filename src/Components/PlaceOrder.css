@@ -1,8 +1,7 @@
-/* Main container for the PlaceOrder component */
 .custom-place-order-container {
   display: flex;
   justify-content: space-between;
-  gap: 20px; /* Spacing between sections */
+  gap: 20px;
   padding: 20px;
   background-color: #f9f9f9;
   flex-wrap: wrap;
@@ -11,7 +10,7 @@
 /* Styling for the form section */
 .custom-delivery-information {
   width: 30%;
-  min-width: 280px; /* For smaller screens */
+  min-width: 280px;
   /* background-color: #fff; */
   padding: 20px;
   /* border-radius: 8px;
@@ -24,7 +23,7 @@
   width: 30%;
   min-width: 280px;
   /* background-color: #fff; */
-  padding: 15px; /* Reduced padding to decrease height */
+  padding: 15px; 
   /* border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
   position: relative;
@@ -62,13 +61,13 @@
 .custom-delivery-information h2 span,
 .custom-cart-totals h2 span,
 .custom-payment-method h2 span {
-  color: #000000; /* Accent color for section titles */
+  color: #000000; 
 }
 
 /* Input field styling */
 .custom-delivery-information {
   width: 100%;
-  max-width: 600px; /* Adjust as necessary */
+  max-width: 600px; 
   position: relative;
   top: 70px;
 }
@@ -128,19 +127,20 @@
 .custom-place-order-button {
   width: 100%;
   padding: 12px;
-  background-color: #000;
+  background-color: var(--primary-dark);
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 20px;
 }
 
 .custom-place-order-button:hover {
   background-color: var(--primary-light);
+  transform: scale(1.05);
 }
 
 

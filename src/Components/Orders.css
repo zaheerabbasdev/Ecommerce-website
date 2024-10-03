@@ -1,72 +1,298 @@
 /* Orders.css */
 
-.custom-order-summary {
-  max-width: 800px; /* Limit the width of the order summary */
-  margin: 20px auto; /* Center the summary in the middle of the page */
-  padding: 20px; /* Add some padding around the content */
-  border: 1px solid #ccc; /* Add a border around the summary */
-  border-radius: 8px; /* Round the corners of the border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
-  background-color: #f9f9f9; /* Light background color for better readability */
+/* General Styles (as you already have) */
+.order-summary-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
 }
 
-.custom-order-summary h2 {
-  text-align: center; /* Center the heading */
-  margin-bottom: 20px; /* Add space below the heading */
-  color: #333; /* Dark text color for better contrast */
+.order-summary-container h2 {
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.custom-order-details {
-  border-top: 2px solid #007bff; /* Add a colored line on top of the details */
-  padding-top: 20px; /* Space between heading and details */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.custom-order-details h3 {
-  color: #007bff; /* Use the same color for consistency */
-  margin-bottom: 15px; /* Space below the order details heading */
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
 }
 
-.custom-order-item {
-  display: flex; /* Flexbox layout for item details */
-  align-items: center; /* Align items vertically centered */
-  margin-bottom: 15px; /* Space between items */
-  padding: 10px; /* Add some padding around each item */
-  border: 1px solid #ddd; /* Light border around each item */
-  border-radius: 5px; /* Rounded corners for items */
-  background-color: #fff; /* White background for items */
+.order-item-left {
+  display: flex;
+  align-items: center;
 }
 
-.custom-order-image {
-  width: 80px; /* Set a fixed width for the images */
-  height: 80px; /* Set a fixed height for the images */
-  object-fit: cover; /* Maintain aspect ratio */
-  border-radius: 5px; /* Round corners of the image */
-  margin-right: 15px; /* Space between image and text */
+.order-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
 }
 
-.custom-order-info {
-  flex: 1; /* Take the remaining space for item info */
+.order-info h4 {
+  font-size: 18px;
+  color: #333;
+  margin: 0;
 }
 
-.custom-order-info h4 {
-  margin: 0; /* Remove default margin */
-  color: #333; /* Dark text color */
+.order-info p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }
 
-.custom-order-info p {
-  margin: 5px 0; /* Space between paragraphs */
+.order-item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.custom-track-order-button {
-  background-color: #007bff; /* Primary button color */
-  color: #fff; /* White text color */
-  padding: 10px 15px; /* Padding inside the button */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.order-status {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 35px;
+  right: 300px;
+  
 }
 
-.custom-track-order-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 5px;
+}
+
+.track-order-button {
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  top: -10px;
+
+  
+}
+
+.track-order-button:hover {
+  background-color: var(--primary-light);
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .order-summary-container {
+    padding: 10px;
+  }
+
+  .order-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start;
+  }
+
+  .order-image {
+    width: 60px; /* Smaller image */
+    height: 60px;
+  }
+
+  .order-info h4 {
+    font-size: 16px;
+  }
+
+  .order-info p {
+    font-size: 12px;
+  }
+
+ .order-status {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 74px; /* Remove or reduce margin */
+    position: static; /* Reset any positioning to keep it in normal flow */
+  }
+
+
+  .track-order-button {
+    font-size: 12px;
+    padding: 8px 12px; /* Smaller padding */
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .order-summary-container {
+    padding: 15px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .order-info h4 {
+    font-size: 17px;
+  }
+
+  .order-info p {
+    font-size: 13px;
+  }
+
+  .order-status {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+}
+
+  .track-order-button {
+    font-size: 13px;
+    padding: 9px 13px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .order-summary-container {
+    padding: 20px;
+  }
+
+  .order-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .order-info h4 {
+    font-size: 18px;
+  }
+
+  .order-info p {
+    font-size: 14px;
+  }
+
+  .order-status {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+}
+
+
+  .track-order-button {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .order-summary-container {
+    padding: 20px;
+  }
+
+  .order-item {
+    padding: 20px; /* Slightly larger padding */
+  }
+
+  .order-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .order-info h4 {
+    font-size: 18px;
+  }
+
+  .order-info p {
+    font-size: 14px;
+  }
+
+  .order-status {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+}
+
+
+  .track-order-button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .order-summary-container {
+    max-width: 1000px; /* Larger container for bigger screens */
+    padding: 25px;
+  }
+
+  .order-image {
+    width: 85px;
+    height: 85px;
+  }
+
+  .order-info h4 {
+    font-size: 20px;
+  }
+
+  .order-info p {
+    font-size: 15px;
+  }
+
+  .order-status {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 75px;
+}
+
+
+  .track-order-button {
+    font-size: 15px;
+    padding: 12px 16px;
+  }
 }
