@@ -1,41 +1,37 @@
-// src/Slide.js
+// src/slider.js
 
 export function showSlide(slides, radios, number) {
     slides.forEach(slide => {
-        slide.style.display = 'none'; // Hide all slides
+        slide.style.display = 'none';
     });
-    slides[number - 1].style.display = 'block'; // Show the current slide
+    slides[number - 1].style.display = 'block';
 
     radios.forEach(radio => {
-        radio.checked = (radio.getAttribute('data-slide') === number.toString()); // Update radio button state
+        radio.checked = (radio.getAttribute('data-slide') === number.toString());
     });
 }
 
 export function nextSlide(slides, radios, currentSlide) {
     const totalSlides = slides.length;
-
-    // Increment the current slide index
-    currentSlide.current = (currentSlide.current % totalSlides) + 1; // Cycle through slides
-
-    showSlide(slides, radios, currentSlide.current); // Show the next slide
+    currentSlide.current = currentSlide.current >= totalSlides ? 1 : currentSlide.current + 1;
+    showSlide(slides, radios, currentSlide.current);
 }
 
 export function initSlider(slides, radios, currentSlide) {
-    showSlide(slides, radios, currentSlide.current); // Show the initial slide
+    showSlide(slides, radios, currentSlide.current);
 
     radios.forEach(radio => {
         radio.addEventListener('click', function () {
-            currentSlide.current = parseInt(this.getAttribute('data-slide')); // Update current slide on radio click
-            showSlide(slides, radios, currentSlide.current); // Show the selected slide
-            resetInterval(); // Reset the interval
+            currentSlide.current = parseInt(this.getAttribute('data-slide'));
+            showSlide(slides, radios, currentSlide.current);
+            resetInterval();
         });
     });
 
-    // Change interval to 4 seconds for each slide
-    let slideInterval = setInterval(() => nextSlide(slides, radios, currentSlide), 4000); 
+    let slideInterval = setInterval(() => nextSlide(slides, radios, currentSlide), 5000);
 
     function resetInterval() {
-        clearInterval(slideInterval); // Clear the existing interval
-        slideInterval = setInterval(() => nextSlide(slides, radios, currentSlide), 4000); // Restart the interval with 4 seconds
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => nextSlide(slides, radios, currentSlide), 5000);
     }
 }
