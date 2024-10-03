@@ -1,9 +1,7 @@
-/* Contact.css */
-
 /* Style for the contact section */
 .contact-section {
   padding: 60px 15px;
-  background-color: #f9f9f9; /* Light background color for contrast */
+  background-color: #f9f9f9; 
 }
 
 .contact-section .row {
@@ -16,7 +14,7 @@
   font-weight: 600;
   text-align: center;
   margin-bottom: 30px;
-  color: #333; /* Darker text color for readability */
+  color: #333; 
   position: relative;
   top: 65px;
   right: 0;
@@ -26,9 +24,9 @@
 /* Style for the image */
 .contact-section img {
   width: 100%;
-  max-width: 65%; /* Ensures image fits within the column */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Slight rounding of corners */
+  max-width: 65%; 
+  height: auto; 
+  border-radius: 8px; 
   margin-left: 110px;
   position: relative;
   top: -40px;
@@ -82,19 +80,19 @@
 }
 
 .contact-section a:hover {
-  text-decoration: none; /* Underline on hover for better user interaction */
+  text-decoration: none; 
 }
 
 /* Style for the button */
 .contact-section button {
-  background-color: var(--primary-dark); /* Primary button color */
+  background-color: var(--primary-dark); 
   color: white;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease; 
   position: relative;
   top: 50px;
   right: 0;
@@ -102,7 +100,8 @@
 }
 
 .contact-section button:hover {
-  background-color: var(--primary-light); /* Darker shade for hover effect */
+  background-color: var(--primary-light); 
+  transform: scale(1.05);
 }
 
 /* Media queries for responsiveness */
@@ -114,16 +113,16 @@
   }
 
   .contact-section h1 {
-    font-size: 1.75rem; /* Slightly smaller heading */
-    top: 0; /* Reset top position for better alignment */
-    left: 0; /* Reset left position for better centering */
+    font-size: 1.75rem; 
+    top: 0; 
+    left: 0; 
   }
 
   .contact-section img {
-    max-width: 80%; /* Make image fit better in smaller screens */
-    margin-left: 0; /* Center the image */
-    left: 20px; /* Reset the left position */
-    top: 0; /* Reset the top position */
+    max-width: 80%; 
+    margin-left: 0; 
+    left: 20px; 
+    top: 0; 
   }
 
   .contact-section h4, .contact-section p, .contact-section a, .contact-section button, .contact-section h5 {
@@ -157,12 +156,12 @@
   }
 
   .contact-section button {
-    font-size: 0.875rem; /* Smaller button text on mobile */
-    padding: 8px 16px; /* Adjust button padding */
-    width: 100%; /* Full-width button for mobile */
+    font-size: 0.875rem; 
+    padding: 8px 16px; 
+    width: 100%; 
   }
 
   .contact-section {
-    padding: 30px 10px; /* Reduce overall padding on smaller devices */
+    padding: 30px 10px; 
   }
 }
