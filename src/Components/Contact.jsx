@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import contact from "../assets/images/contact-image.png";
 
+
 const Contact = () => {
   return (
     <div>

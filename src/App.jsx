@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import Home from "./Components/Home";
+import Slider from "./Components/Slider";
 import Collection from "./Components/Collection";
 // import BestSellers from "./Components/BestSellers";
 import About from "./Components/About";
@@ -23,7 +23,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Slider />} />
         <Route path="/" element={<Collection />} />
          <Route path="/product/:id" element={<ProductDetail />} /> {/* Product Detail Route */}
         {/* <Route path="/bestseller" element={<BestSellers />} /> */}

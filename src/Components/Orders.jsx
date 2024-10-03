@@ -11,6 +11,7 @@ const Orders = () => {
 
   return (
     <div className="order-summary-container">
+    
       <h2>MY ORDERS</h2>
       <div className="order-list">
         {/* Check if cartItems exist and have a length */}
@@ -42,6 +43,7 @@ const Orders = () => {
           <p>No orders available.</p> // Display this message when there are no orders
         )}
       </div>
+      
     </div>
   );
 };
