@@ -29,7 +29,7 @@
 
 /* Card Styles */
 .collection-section .card-body {
-  margin-bottom: 30px; /* Adjusted margin for better spacing */
+  margin-bottom: 30px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -52,6 +52,7 @@
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* Ensure the image covers the container */
   transition: transform 0.3s ease; /* Add transition for smooth scaling */
+  border-bottom: none;
   position: relative;
   top: 0;
   left: -2px;
